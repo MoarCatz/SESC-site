@@ -1,17 +1,19 @@
 .navbar-section .btn {
-  border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 h4 {
-  color: #1C7F00;
   margin-bottom: 0;
+
+  color: #1C7F00;
 }
 
 .header-logo {
   position: relative;
-  left: 15px;
   bottom: 5px;
+  left: 15px;
+
   width: 80%;
   height: 80%;
 }
@@ -26,5 +28,6 @@ h4 {
 
 article img {
   float: left;
+
   margin: 0 20px 15px 0;
 }
