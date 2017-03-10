@@ -1,469 +1,143 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>СУНЦ УрФУ | Официальный сайт</title>
-    <link href='main.css' type='text/css' rel='stylesheet'>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Bad+Script" rel="stylesheet">
-  </head>
-  <body>
-    <div class='header'>
-      <a href='mysite.html' class='logo'>
-        <img src='assets/img/head.svg'>
+<html lang="ru">
+
+<head>
+  <title>СУНЦ УрФУ | Официальный сайт</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/spectre.css" type="text/css" rel="stylesheet">
+  <link href="assets/css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <!-- SESC Logo -->
+    <section class="navbar-section">
+      <a class="header-logo no-outline" href="#">
+        <img class="img-responsive" src="assets/img/head.svg" alt="СУНЦ УрФУ">
       </a>
-	    
-      <div class='header-content'>
-        <div class='header-top'>
-          <span class='auth-field'>
-            <form method=POST class='header-item'>
-              <p>Логин</p>
-              <input name='login' class='input'>
-              <p>Пароль</p>
-              <input type='password' name='passw' class='input'>
-              <input type='submit' name='subAuth' class='input submit' value='Вход'>
-            </form>
-          </span>
-          
-          <!--<div class='user-menu'>
-            <p class='logged-in-as'>
-              Вы вошли как <b>Лев Челядинов</b>
-            </p>
-                
-            <span class='user-options'>
-              <a href='#' class='user-link'>
-                Расписание на следующий день
-              </a>
-              <a href='#' class='user-link'>
-                Электронный журнал
-              </a>
-              <a href='#' class='user-link'>
-                Объявления для класса
-              </a>
-              <a href='#' class='user-link'>
-                День рождения
-              </a>
-              <a href='#' class='user-link'>
-                Выход
-              </a>
-            </span>
-          </div>-->
-          
-          <span class='ext-links'>
-            <a href='mysite.html' class='header-item header-link' id='usu-link'>
-              <img src='assets/img/urfu_logo.png'>
-            </a>
-            <a href='mysite.html' class='header-item header-link' id='eng-link'>
-              <img src='assets/img/gb.gif'>
-              <p>English</p>
-            </a>
-          </span>
-        </div>
-        <div class='navigation'>
-          <ul class='main-bar'>
-            <li class='nav-btn'>
-              <a href='#'>Официально</a>
-              <ul class='dropdown'>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Общие и платежные реквизиты</a></li>
-                <li><a href="#">Наша история</a></li>
-                <li><a href="#">Наши достижения</a></li>
-                <li><a href="#">Документы</a></li>
-                <li><a href="#">Подразделения</a></li>
-                <li><a href="#">Наше общежитие</a></li>
-                <li><a href="#">Медицинский пункт</a></li>
-                <li><a href="#">Сотрудники</a></li>
-                <li><a href="#">Выпускники</a></li>
-                <li class='last-item'><a href="#">Работа у нас</a></li>
-              </ul>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Учеба</a>
-              <ul class='dropdown'>
-                <li><a href="#">Годовой календарный график, звонки</a></li>
-                <li><a href="#">Учебные планы и программы</a></li>
-                <li><a href="#">Отделение дополнительного платного образования</a></li>
-                <li><a href="#">Выпускникам текущего года</a></li>
-                <li><a href="#">Кафедра гуманитарного образования</a></li>
-                <li><a href="#">Кафедра филологии</a></li>
-                <li><a href="#">Кафедра математики</a></li>
-                <li><a href="#">Кафедра информатики</a></li>
-                <li><a href="#">Кафедра физики и астрономии</a></li>
-                <li><a href="#">Кафедра химии и биологии</a></li>
-                <li><a href="#">Кафедра иностранных языков</a></li>
-                <li><a href="#">Кафедра психофизической культуры</a></li>
-                <li><a href="#">Расписание занятий</a></li>
-                <li class='last-item'><a href="#">Результаты ЕГЭ</a></li>
-              </ul>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Соревнования</a>
-              <ul class='dropdown'>
-                <li><a href="#">Документы</a></li>
-                <!-- <li><a href="#">Открытые олимпиады</a></li> -->
-                <li><a href="#">Конкурс
-                                               исследовательских работ</a></li>
-                <li><a href="#">Открытый математический турнир</a></li>
-                <li><a href="#">Уральский физический турнир</a></li>
-                <li><a href="#">Турнир юных физиков</a></li>
-                <li class='last-item'><a href="#">Анонсы олимпиад</a></li>
-              </ul>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Общение</a>
-              <ul class='dropdown'>
-                <li><a href="#">Вопрос администрации</a></li>
-                <li><a href="#">Опросы и голосования</a></li>
-                <li><a href="#">Страничка психолога</a></li>
-                <li class='last-item'><a href="#">Чат Совета лицеистов</a></li>
-              </ul>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Как поступить к нам</a>
-              <ul class='dropdown'>
-                <li><a href="#">Оперативная информация</a></li>
-                <li><a href="#">Порядок приёма заявлений</a></li>
-                <li><a href="#">Программы вступительных испытаний</a></li>
-                <li><a href="#">Архив вступительных заданий</a></li>
-                <li class='last-item'><a href="#">Летняя школа</a></li>
-              </ul>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Подготовительные курсы</a>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Ссылки</a>
-              <ul class='dropdown'>
-                <li><a href="#">УрФУ</a></li>
-                <li><a href="#">Вузы Екатеринбурга</a></li>
-                <li><a href="#">Другие образовательные ресурсы</a></li>
-                <li><a href="#">Органы управления образованием</a></li>
-                <li><a href="#">Единый государственный экзамен</a></li>
-                <li class='last-item'><a href="#">Прочие ссылки</a></li>
-              </ul>
-            </li>
-            <li class='nav-btn'>
-              <a href='#'>Написать нам</a>
-            </li>
-          </ul>
-        </div>
-        <div class='quote'>
-          <img src='assets/img/quote.svg'>
-          <p>АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧЩЪЬЭЮЯабвгдеёжзиклмнопрстуфхцчщъьэюя</p>
-          <img src='assets/img/quote.svg'>
-          <a href='#'>Добавить афоризм</a>
-        </div>
-      </div>
-    </div>
-	  
-    <div class='page'>
-      <div class='column left-column'>
-        <div class='info-box'>
-          <div class='info-border'>
-            <ul>
-              <li>Важно!</li>
-            </ul>
+    </section>
 
-            <div class='notice'>
-              <p>
-                Начата регистрация на <b>открытый математический турнир</b>.<br>
-                <a href="#">Подробнее</a>
-              </p>
-              <br>
-              <p>
-                <a href="#"><b>Все объявления</b></a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class='info-box'>
-          <div class='info-border'>
-            <ul>
-              <li>Не пропустите</li>
-            </ul>
-
-            <div class='notice'>
-              <p>
-                Текущих анонсов нет.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <p class='left-col-divider'>
-          • Проекты •
-        </p>
-
-        <ul class='left-col-list'>
-          <li>
-            <a href="#">
-              ДНТУ «ПОИСК»
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Университетские школы
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="assets/img/sirius.png" border=0 style="margin:3pt">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Фоторепортажи об Уральской проектной смене ОЦ «Сириус»
-            </a>
-          </li>
-        </ul>
-
-        <p class='left-col-divider'>
-          • Наша периодика •
-        </p>
-
-        <ul class='left-col-list'>
-          <li>
-            <a href="#">
-              Журнал «Авангард»
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Журнал «Архимед»
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Газета «Уральский университет»
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Группа «Наука в лицах»
-            </a>
-          </li>
-        </ul>
-
-        <p class='temperature'>
-          Сейчас в Екатеринбурге<br>
-          <b>+1 °C</b>
-        </p>
-      </div>
-      <div class='news'>
-        <div class='news-pad'>
-          <a href='#'>
-            Опубликовать свою новость
+    <!-- Navigation buttons -->
+    <section class="navbar-section">
+      <div class="main-bar">
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary">
+            Официально
           </a>
-          <p class='post-date'>
-            20.02.2017
-          </p>
-          <h2>
-            Третья встреча с будущим
-          </h2>
-          <hr>
-          <img src='assets/img/000659.jpg' class='post-img'>
-          <p class='post-text'>
-            19 февраля в нашем лицее прошли третьи и заключительные в этом году консультативные встречи с родителями будущих абитуриентов. На этот раз СУНЦ принимал гостей, желающих узнать о поступлении в классы математико-информационного и химико-биологического профилей.
-          </p>
-          <p class='post-text'>
-            Встречу открыла Л. М. Погребак, начальник отдела конкурсного отбора; поприветствовав гостей, она передала слово коллегам. Учитель кафедры филологии А. А. Упоров подробно рассказал о вступительных испытаниях по русскому языку, которые ожидают абитуриентов в этом году, показал примеры заданий. С программой по математике, с внесенными в нее изменениями, с перечнем факультативных курсов ознакомила гостей М. И. Масленникова, старший преподаватель кафедры математики. Об экзаменах и внеучебных мероприятиях, о статистике поступления выпускников СУНЦ в вузы гости узнали из выступления Н. А. Гейн, заведующей кафедрой информатики.
-          </p>
-          <p class='post-text'>
-            Специфику химико-биологического профиля представили заведующая кафедрой химии и биологии М. Н. Данилова, учитель этой же кафедры Л. И. Климова и учитель кафедры математики Т. А. Ананьина. Много вопросов об обучении детей на отделении дополнительного платного образования было задано А. В. Звонаревой, заместителю директора СУНЦ.
-          </p>
-          <p class='post-text'>
-            В завершение встречи сотрудники отдела конкурсного отбора очень подробно рассказали о регламенте вступительных испытаний, уделив внимание тем моментам, которые чаще всего являются проблемными.
-          </p>
-          <p class='post-text'>
-            Всего мероприятие посетило около 240 абитуриентов и их родителей из разных городов и поселков Урала (Югорск, Миасс, Качканар, Алапаевск, Серов, Верхняя Синячиха и др.) Мы попросили некоторых гостей рассказать о своих ожиданиях от лицея:
-          </p>
-          <p class='post-text'>
-            — Я рассчитываю, что в СУНЦ смогу получить хорошее образование, ведь преподавание здесь на очень высоком уровне, — поделился с нами один из абитуриентов, приехавший из Режа.
-          </p>
-          <p class='post-text'>
-            А вот родители восьмиклассника, планирующего поступить в 9 математико-информационный класс, далеко забегать не стали:
-          </p>
-          <p class='post-text'>
-            — Для начала хотим посмотреть, сможет ли ребенок поступить, а также дать ему шанс проверить свои возможности, — сказали они.
-          </p>
-          <p class='post-text'>
-            Мы желаем всем ребятам удачи на вступительных экзаменах. СУНЦ ждет вас!
-          </p>
-          <ul>
-            <li>
-              <span class='old-news-entry'>
-                <img src='assets/img/000658.jpg' class='news-thumb'>
-                <div>
-                  <a class='old-news-title'>
-                    <b>16.02.2017</b> Уральская смена: хроника событий
-                  </a>
-                  <p class='old-news-desc'>
-                    С 1 по 24 февраля в образовательном центре «Сириус» (город Сочи) проходит Уральская образовательная смена, в которой принимают участие 52 учащихся нашего СУНЦ. Все дни насыщены интереснейшими событиям...
-                  </p>
-                </div>
-              </span>
-            </li>
-            <li>
-              <span class='old-news-entry'>
-                <img src='assets/img/000657.jpg' class='news-thumb'>
-                <div>
-                  <a class='old-news-title'>
-                    <b>10.02.2017</b> Чертоги разума
-                  </a>
-                  <p class='old-news-desc'>
-                    8 февраля — День российской науки. Хотя этот день и не является выходным, его широко отмечают практически во всех научных коллективах. И мы решили у себя в ОДПО отметить этот праздник ...
-                  </p>
-                </div>
-              </span>
-            </li>
-            <li>
-              <span class='old-news-entry'>
-                <img src='assets/img/000656.jpg' class='news-thumb'>
-                <div>
-                  <a class='old-news-title'>
-                    <b>07.02.2017</b> «Акуна матата» (Всё будет хорошо!)
-                  </a>
-                  <p class='old-news-desc'>
-                    В этом году традиционно несколько классов ОДПО ездили в выходные на базу отдыха. В начале вечера нас ожидал захватывающий квест «Остановка по требованию». Это отличный способ расслабиться посл...
-                  </p>
-                </div>
-              </span>
-            </li>
-            <li>
-              <span class='old-news-entry'>
-                <img src='assets/img/000655.jpg' class='news-thumb'>
-                <div>
-                  <a class='old-news-title'>
-                    <b>05.02.2017</b> «Сириус»: Уральская проектная смена открыта!
-                  </a>
-                  <p class='old-news-desc'>
-                    В образовательном центре «Сириус» (город Сочи) прошло торжественное открытие февральской смены. Среди участников — юные биологи, химики, конструкторы, информатики, астрономы, литераторы, музыканты, фи...
-                  </p>
-                </div>
-              </span>
-            </li>
-            <li>
-              <span class='old-news-entry'>
-                <img src='assets/img/000654.jpg' class='news-thumb'>
-                <div>
-                  <a class='old-news-title'>
-                    <b>30.01.2017</b> Двери снова были открыты
-                  </a>
-                  <p class='old-news-desc'>
-                    29 января состоялась вторая консультативная встреча с абитуриентами и их родителями. На этот раз лицей принимал ребят, планирующих поступить в классы физико-математического, физико-технического и физи...
-                  </p>
-                </div>
-              </span>
-            </li>
-          </ul>
-          <div class='news-archive'>
-            <a href='#' class='link-button'>
-              Архив новостей
-            </a>
-            <form method=POST>
-              <input name='srch-query' class='input' placeholder='Найти в новостях'>
-              <input type='submit' name='srch' class='input submit' value='Поиск'>
-            </form>
-          </div>
+          <a href="#" class="btn btn-primary">
+            Учеба
+          </a>
+          <a href="#" class="btn btn-primary">
+            Соревнования
+          </a>
+          <a href="#" class="btn btn-primary">
+            Общение
+          </a>
+          <a href="#" class="btn btn-primary">
+            Как поступить к нам
+          </a>
+          <a href="#" class="btn btn-primary">
+            Подготовительные курсы
+          </a>
+          <a href="#" class="btn btn-primary">
+            Ссылки
+          </a>
+          <a href="#" class="btn btn-primary">
+            Написать нам
+          </a>
         </div>
+        <blockquote>
+          <i>АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧЩЪЬЭЮЯабвгдеёжзиклмнопрстуфхцчщъьэюя</i><br />
+          <cite>лол</cite>
+        </blockquote>
       </div>
-      <div class='column right-column'>
-        <div class='info-box'>
-          <div class='info-border'>
-            <ul>
-              <li>Поздравляем!</li>
-            </ul>
+    </section>
+  </header>
+  <main>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-3">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">
+                <i class="material-icons">announcement</i> Важно!
+              </h4>
+            </div>
+            <div class="card-body">
+              Начата регистрация на открытый математический турнир.<br />
+              <a class="no-outline" href="#">Подробнее</a>
+            </div>
 
-            <div class='notice'>
-              <p class='title'>
-                С днем рождения вас,
-              </p>
-              <p class='names'>
-                Мария Азарова,<br>
-                Лев Сабанцев,<br>
-                Иван Колыганов,<br>
-                Марк Шубат!
-              </p>
+            <div class="card-body">
+              Учащимся и сотрудникам, имеющим проблемы с транспортным приложением (функция Е-карты на кампусной карте Сбербанка), необходимо не позднее 10 марта внести себя в список в приемной директора (комн. 112, помощник директора Елена Александровна).
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">
+                Все объявления
+                </button>
+            </div>
+          </div>
 
-              <hr>
-              <p class='title'>
-                Победителей регионального этапа Всероссийской олимпиады
-                школьников по химии
-              </p>
-              <p class='names'>
-                Алексея Калягина (9В),<br>
-                Всеволода Веденского (9Б),<br>
-                Данила Лисицина (10К),<br>
-                Михаила Бортяжа (11К)
-              </p>
-              <p class='title'>
-                и призеров этой олимпиады
-              </p>
-              <p class='names'>
-                Артёма Зарипова (9Б),<br>
-                Снежану Барсанову (9Б),<br>
-                Леонида Голицина (10К),<br>
-                Екатерину Ясникову (10К)!
-              </p>
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">
+                <i class="material-icons">rss_feed</i> Не пропустите
+              </h4>
+            </div>
+            <div class="card-body">
+              Текущих анонсов нет.
             </div>
           </div>
         </div>
+        <div class="column col-6">
+          <article>
+            <div class="container">
+              <div class="columns">
+                <div class="column col-9">
+                  <h3>
+                    «Это Тебе...»
+                  </h3>
+                </div>
+                <div class="column col-3">
+                  <div class="text-right">
+                    <span class="label label-success">
+                      <time>09/03/2017</time>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <div class='info-box'>
-          <div class='info-border'>
-            <ul>
-              <li>А твое мнение?</li>
-            </ul>
+            <img class="img-responsive rounded" src="assets/img/000664.jpg" alt="Фото новости" />
 
-            <p class='title'>
-              Кажется ли вам, что зима длится дольше лета?
+            <p>
+              ОДПО отметило 8 Марта. Немного перефразируя слова одной известной песенки — «Из чего же, из чего же, из чего же cделаны СУНЦа девчонки? Из стремлений и сражений, из упорства и достижений сделаны СУНЦа девчонки!»
             </p>
 
-            <p class='denied'>
-              Принять участие в опросе могут только учащиеся и сотрудники СУНЦ.<br>
-              Пожалуйста, аутентифицируйтесь (форма сверху).<br>
-              Гости сайта могут лишь просматривать результаты опросов.
+            <p>
+              Девчонки СУНЦа... Все они такие разные, и каждая из них неповторима. Изящная и милая Лина Исламгалиева закружила нас в вальсе. Прекрасные представительницы от каждого класса блеснули смекалкой, знаниями и «женской» логикой в конкурсах.
             </p>
-            <!--<p class='denied'>
-              Вы уже принимали участие в опросе.</br>
-              Вы можете лишь просматривать результаты опросов. 
-            </p>-->
 
-            <a href='#' class='info-link'>
-              Результаты опроса
-            </a>
-          </div>
+            <p>
+              Самые лестные комплименты для всех женщин в этот день прозвучали от ведущих и участников программы. Дмитрий Борисов заворожил нас звуками фортепиано, а танец от Яна Роменского зарядил невероятной энергией. Проникновенные стихи, которые читал Игорь Зубарев,
+              тронули душу. Сюрпризом для гостей оказалось выступление молодого коллектива «Шукстов и компания» (лидер группы, барабанщик — Евгений Устинов, бас-гитарист — Александр Шукстов, электрогитарист — Данил Миронов и солист — Денис Синицын). Ребята
+              исполнили песню «Do I wanna know?» группы «Arctic monkeys» — порыв души и нежность чувств, рок и любовь звучали со сцены.
+            </p>
+
+            <p>
+              И еще много теплых слов любви и благодарности было сказано для мам, учителей, девчонок! Нам бы хотелось, чтобы все мужчины учились любить, ценить, уважать Женщину, потому что она умеет ВСЁ! А также чтобы все мужчины могли чувствовать необыкновенную легкость
+              от простого общения с ней. С праздником, наши дорогие и милые!
+            </p>
+          </article>
         </div>
-
-        <div class='info-box'>
-          <div class='info-border'>
-            <ul>
-              <li>Стихотворение недели</li>
-            </ul>
-
-            <p class='poem'>
-              Когда лежит луна ломтем чарджуйской дыни<br>
-              На краешке окна, и духота кругом,<br>
-              Когда закрыта дверь, и заколдован дом<br>
-              Воздушной веткой голубых глициний,<br>
-              ...........
-            </p>
-            <a href='#' class='info-link'>
-              Читать полностью
-            </a>
-            <a href='#' class='info-link'>
-              Случайное стихотворение
-            </a>
-            <a href='#' class='info-link'>
-              Все произведения
-            </a>
-            <a href='#' class='info-link'>
-              О проекте
-            </a>
-          </div>
+        <div class="column col-3">
+          <div class="text-center">col-3</div>
         </div>
       </div>
     </div>
-  </body>
+  </main>
+</body>
+
 </html>
