@@ -413,7 +413,7 @@ body {
   color: #333;
   background: #fff;
 
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.4rem;
 
   text-rendering: optimizeLegibility;
@@ -434,13 +434,6 @@ a.active {
 :focus {
   outline: 0;
   box-shadow: 0 0 0 .2rem rgba(76, 175, 80, .15);
-}
-[disabled],
-.disabled {
-  cursor: default;
-  pointer-events: none;
-
-  opacity: .5;
 }
 .btn .icon,
 .toast .icon,
@@ -586,7 +579,7 @@ abbr[title] {
 :lang(ja),
 :lang(ko),
 .cjk {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", "Helvetica Neue", sans-serif;
 }
 :lang(zh) ins,
 :lang(ja) ins,
@@ -697,6 +690,14 @@ abbr[title] {
   color: #fff;
   border-color: #3d8b40;
   background: #449d48;
+}
+.btn[disabled],
+.btn:disabled,
+.btn.disabled {
+  cursor: default;
+  pointer-events: none;
+
+  opacity: .5;
 }
 .btn.btn-primary {
   color: #fff;
@@ -859,9 +860,6 @@ abbr[title] {
 }
 .form-input:focus {
   border-color: #4caf50;
-}
-.form-input[disabled] {
-  background: #f8f8f8;
 }
 .form-input.input-sm {
   height: 2.4rem;
@@ -1216,6 +1214,28 @@ textarea.form-input {
   display: inline-flex;
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+}
+.form-input:disabled,
+.form-select:disabled,
+.form-input.disabled,
+.form-select.disabled {
+  cursor: default;
+
+  opacity: .5;
+  background-color: #f0f0f0;
+}
+input:disabled + .form-icon,
+input.disabled + .form-icon {
+  cursor: default;
+  pointer-events: none;
+
+  opacity: .5;
+  border-color: #ccc;
+  background: #f0f0f0;
+}
+.form-switch input:disabled + .form-icon::after,
+.form-switch input.disabled + .form-icon::after {
+  background: #fff;
 }
 .form-horizontal {
   padding: 1rem;
@@ -1873,6 +1893,13 @@ code {
 
   font-size: 1;
 }
+.form-autocomplete .menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+}
 .avatar {
   position: relative;
 
@@ -1884,7 +1911,7 @@ code {
 
   vertical-align: middle;
 
-  color: #fff;
+  color: rgba(255, 255, 255, .75);
   border-radius: 50%;
   background: #4caf50;
 
@@ -2066,7 +2093,7 @@ code {
 .card .card-header,
 .card .card-body,
 .card .card-footer {
-  padding: 1.5rem 1.5rem 0 1.5rem;
+  padding: 1rem 1.5rem 0 1.5rem;
 }
 .card .card-header:last-child,
 .card .card-body:last-child,
@@ -2143,8 +2170,8 @@ code {
 
   display: none;
 
-  -webkit-animation: slide-down .2s;
-  animation: slide-down .2s;
+  -webkit-animation: slide-down .2s 1;
+  animation: slide-down .2s 1;
 }
 .dropdown.dropdown-right .menu {
   right: 0;
@@ -2238,6 +2265,8 @@ code {
   display: inline-block;
 
   padding: 0 .8rem;
+
+  text-transform: uppercase;
 
   background: #fff;
 }
@@ -2454,6 +2483,13 @@ code {
 .pagination .page-item a:hover {
   color: #4caf50;
 }
+.pagination .page-item a[disabled],
+.pagination .page-item a.disabled {
+  cursor: default;
+  pointer-events: none;
+
+  opacity: .5;
+}
 .pagination .page-item.active a {
   color: #fff;
   background: #4caf50;
@@ -2621,10 +2657,15 @@ code {
   padding-right: 1rem;
 }
 .tile .tile-title {
-  font-size: 1.6rem;
+  margin-bottom: 0;
+
+  color: #357a38;
+
+  font-size: 1.4rem;
   font-weight: 500;
 }
-.tile .tile-meta {
+.tile .tile-meta,
+.tile .tile-content p {
   color: #999;
 }
 .tile.tile-centered {

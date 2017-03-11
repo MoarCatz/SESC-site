@@ -1,12 +1,23 @@
+header {
+  background: rgba(193, 251, 155, 0.4);
+}
+
+blockquote {
+  border-color: rgba(23, 89, 29, 0.7);
+  background: rgba(23, 91, 27, 0.1);
+}
+
+.card {
+  background: rgba(207, 216, 220, 0.25);
+}
+
 .navbar-section .btn {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
-h4 {
+.card-header h4{
   margin-bottom: 0;
-
-  color: #1C7F00;
 }
 
 .header-logo {
@@ -30,4 +41,49 @@ article img {
   float: left;
 
   margin: 0 20px 15px 0;
+}
+
+article p {
+  text-indent: 10px;
+
+  line-height: 18px;
+}
+
+.columns {
+  margin: 0;
+}
+
+.tab-section {
+  display: none;
+
+  width: 100%;
+}
+
+.tab-section a {
+  width: 100%;
+  margin-top: 3px;
+}
+
+.card {
+  margin: 5px 0;
+}
+
+.tile-icon {
+  width: 18%;
+}
+
+.tile-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.post-desc {
+  font-size: 9pt;
+  line-height: 11pt;
+}
+
+footer {
+  border: 0 solid #4CAF50;
+  border-top-width: 3px;
+  background: rgba(0, 0, 0, 0.7);
 }
