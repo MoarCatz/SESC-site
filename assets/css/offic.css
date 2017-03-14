@@ -1,21 +1,22 @@
 header {
-  background: rgba(193, 251, 155, 0.4);
+  background: #f6f6f6;
+  position: fixed;
+  width: 100%;
 }
+
+.videos .col-10 {width: 100%;}
 
 blockquote {
-  border-color: rgba(23, 89, 29, 0.7);
   background: rgba(23, 91, 27, 0.1);
+  border-color: rgba(23, 89, 29, 0.7);
 }
 
-.navbar-section#logo {
-  width: 2%;
-  margin-left: 15px;
+#logo {
+  margin: 0 15px;
+  width: 20px;
 }
 
-.navbar-section .btn {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
+
 
 .no-outline:focus {
   box-shadow: none;
@@ -44,6 +45,7 @@ section ul {
 
 .columns {
   margin: 0;
+  padding: 51px 0 0;
 }
 
 table code {
