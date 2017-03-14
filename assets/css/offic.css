@@ -1,0 +1,61 @@
+header {
+  background: rgba(193, 251, 155, 0.4);
+}
+
+blockquote {
+  border-color: rgba(23, 89, 29, 0.7);
+  background: rgba(23, 91, 27, 0.1);
+}
+
+.navbar-section#logo {
+  width: 2%;
+  margin-left: 15px;
+}
+
+.navbar-section .btn {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.no-outline:focus {
+  box-shadow: none;
+}
+
+.col-3 {
+  padding: 10px 0 0 15px;
+}
+
+.col-9 {
+  border: 0 solid #EEE;
+  border-left-width: 1px;
+}
+
+.col-3 h6, .col-9 h4 {
+  margin: 0;
+}
+
+.col-9 h4 {
+  color: #3d8b40;
+}
+
+section ul {
+  margin: 10px;
+}
+
+.columns {
+  margin: 0;
+}
+
+table code {
+  color: #000;
+}
+
+a.active {
+  text-decoration: none;
+}
+
+footer {
+  border: 0 solid #4CAF50;
+  border-top-width: 3px;
+  background: rgba(0, 0, 0, 0.7);
+}
