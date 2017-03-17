@@ -12,70 +12,124 @@
 </head>
 
 <body>
-  <header class="navbar">
-
-    <section class="grid-header container grid-960 bg-gray">
+  <header>
+    <section class="grid-header container grid-960">
       <nav class="navbar">
         <section class="navbar-section">
-          <a href="#sidebar" class="btn btn-lg btn-link btn-action show-sm"><i class="icon icon-menu"></i></a>
-          <a class="header-logo no-outline" href="index.html">
-            <img class="img-responsive" id="logo" src="https://preview.c9users.io/alexbagirov/moarcatz/SESC-site/assets/img/logo-no-text.png" alt="СУНЦ УрФУ">
+          <!--<a href="#sidebar" class="btn btn-lg btn-link btn-action show-sm"><i class="icon icon-menu"></i></a>-->
+          <a class="no-outline" href="index.html">
+            <img class="img-responsive" id="logo" src="assets/img/logo-no-text.png" alt="СУНЦ УрФУ">
           </a>
-          <a href="index.html" class="btn btn-link">Официально</a>
-          <a href="index.html" class="btn btn-link">Учеба</a>
-          <a href="index.html" class="btn btn-link">Общение</a>
-          <a href="index.html" class="btn btn-link">Соревнования</a>
-          <a href="index.html" class="btn btn-link">Ссылки</a>
+          <div class="hide-md">
+            <a href="index.html" class="btn btn-link">Официально</a>
+            <!--
+            --><a href="index.html" class="btn btn-link">Учеба</a>
+            <!--
+            --><a href="index.html" class="btn btn-link">Общение</a>
+            <!--
+            --><a href="index.html" class="btn btn-link">Соревнования</a>
+            <!--
+            --><a href="index.html" class="btn btn-link">Ссылки</a>
+          </div>
         </section>
         <section class="navbar-section">
-          <a href="#" target="_blank" class="btn btn-primary">Как поступить?</a>
+          <div class="dropdown">
+            <div class="btn-group">
+              <a href="#" target="_blank" class="btn btn-primary">Как поступить?</a>
+              <a class="btn btn-primary show-md dropdown-toggle" tabindex="0">
+                <i class="icon icon-menu"></i>
+              </a>
+            </div>
+            <ul class="menu">
+            </ul>
+          </div>
         </section>
       </nav>
     </section>
-    </section>
   </header>
-  <main class="columns">
-    <aside class="col-3">
-      <div class="label label-success">
-        <h6>Навигация</h6>
+  <main class="columns flex">
+    <aside class="col-2 hide-lg">
+      <div class="sidebar">
+        <div class="label label-success">
+          <h6>Навигация</h6>
+        </div>
+        <ul class="nav">
+          <li class="nav-item active">
+            <a href="#about">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#how-to-find">Как нас найти</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Наша история</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Наши достижения</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Документы</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Подразделения</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Наше общежитие</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Медицинский пункт</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Сотрудники</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Выпускники</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Работа у нас</a>
+          </li>
+        </ul>
       </div>
-      <ul class="nav">
-        <li class="nav-item active">
-          <a href="#about">О нас</a>
-        </li>
-        <li class="nav-item">
-          <a href="#how-to-find">Как нас найти</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Наша история</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Наши достижения</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Документы</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Подразделения</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Наше общежитие</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Медицинский пункт</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Сотрудники</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Выпускники</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">Работа у нас</a>
-        </li>
-      </ul>
     </aside>
-    <section class="col-9">
+    <aside class="col-1 col-xs-2 show-lg">
+      <div class="sidebar">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a href="#about"><i class="icon icon-info"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#how-to-find"><i class="icon icon-near_me"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-book"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-grade"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-attach_file"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-folder_shared"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-airline_seat_individual"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-healing"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-school"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-group"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><i class="icon icon-work"></i></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <section class="col-10 col-lg-11 col-xs-10">
       <div class="ml-10 mt-10">
         <h4 id="about">О нас</h4>
         <div class="divider"></div>
@@ -123,32 +177,8 @@
 
         <h4 name="videos">Видеоролики о СУНЦ УрФУ</h4>
         <div class="divider"></div>
-        <div class="columns mb-10 videos">
-          <div class="col-10">
-            <div class="video-responsive mb-10">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/XmSRSqwDDKA" frameborder="0" allowfullscreen="" wmode="transparent"></iframe>
-            </div>
-            <div class="video-responsive mb-10">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/MQOzrychH3g" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-            <div class="video-responsive mb-10">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/11z8S0-MZu4" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-            <div class="video-responsive mb-10">
-              <iframe src="https://player.vimeo.com/video/125889095" width="640" height="338" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-              <p>
-                <a href="https://vimeo.com/125889095">
-                  Произведение науки
-                </a> from
-                <a href="https://vimeo.com/bigbagfilms">
-                  Big Bag Films
-                </a> on
-                <a href="https://vimeo.com">
-                  Vimeo
-                </a>.
-              </p>
-            </div>
-          </div>
+        <div class="mb-10 videos">
+          <iframe width="720" height="405" src="https://www.youtube.com/embed/videoseries?list=PLLvaFdSbLLlDydVPB3ORdJ9-NRo60tOFQ" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -327,8 +357,6 @@
   <footer>
     <div class="pt-10 pb-10"></div>
   </footer>
-
-
 
 </body>
 
