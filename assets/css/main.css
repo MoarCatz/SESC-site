@@ -1,5 +1,5 @@
 header {
-  background: rgba(193, 251, 155, 0.4);
+  background: #f6f6f6;
 }
 
 blockquote {
@@ -9,11 +9,6 @@ blockquote {
 
 .card {
   background: rgba(207, 216, 220, 0.25);
-}
-
-.navbar-section .btn {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
 }
 
 .card-header h4{

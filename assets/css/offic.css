@@ -1,59 +1,178 @@
 header {
-  background: #f6f6f6;
   position: fixed;
+  z-index: 1;
+  top: 0;
+
   width: 100%;
+
+  background: #f6f6f6;
 }
 
-.videos .col-10 {width: 100%;}
+header .menu li {
+  margin: 0;
+}
 
-blockquote {
-  background: rgba(23, 91, 27, 0.1);
-  border-color: rgba(23, 89, 29, 0.7);
+a.btn-primary.show-md {
+  padding: 5px 6px;
+}
+
+main {
+  width: 100;
+  margin: 52px 10px 0 250px;
+}
+
+@media only screen and (max-width: 960px) {
+  main {
+    margin-left: 39px;
+  }
+
+  td {
+    font-size: 8pt;
+  }
+
+  #achievments + article table {
+    max-width: 60%;
+  }
+}
+
+aside {
+  position: fixed;
+  top: 57px;
+  left: 10px;
+}
+
+aside.hide-lg {
+  width: 250px;
+}
+
+aside.show-lg {
+  top: 52px;
+  left: 0;
+
+  width: 39px;
+}
+
+aside i {
+  font-size: 17pt;
 }
 
 #logo {
-  margin: 0 15px;
   width: 20px;
+  margin: 0 15px;
 }
-
-
 
 .no-outline:focus {
   box-shadow: none;
 }
 
-.col-3 {
-  padding: 10px 0 0 15px;
-}
-
-.col-9 {
+.maintext {
   border: 0 solid #EEE;
   border-left-width: 1px;
 }
 
-.col-3 h6, .col-9 h4 {
+aside h6,
+.maintext h4,
+.card-header h6 {
   margin: 0;
 }
 
-.col-9 h4 {
+.maintext h3,
+.maintext h4,
+.maintext h6 {
   color: #3d8b40;
+}
+
+.maintext h6 {
+  margin-bottom: 5px;
 }
 
 section ul {
   margin: 10px;
 }
 
-.columns {
-  margin: 0;
-  padding: 51px 0 0;
-}
-
 table code {
   color: #000;
 }
 
+article p {
+  text-indent: 10px;
+}
+
+article .card {
+  display: inline-block;
+}
+
+article .card-header {
+  padding: 5px 15px 0 15px;
+}
+
+article section p {
+  line-height: 13pt;
+}
+
+#achievments + article h6 {
+  margin: 0;
+
+  text-align: center;
+}
+
+#achievments + article th,
+#achievments + article td
+{
+  padding: 5px 10px;
+
+  font-size: 9pt;
+}
+
+#achievments + article td:nth-child(2) {
+  text-align: center !important;
+}
+
 a.active {
   text-decoration: none;
+}
+
+.anchor {
+  visibility: hidden;
+
+  height: 52px;
+  margin-top: -52px;
+}
+
+.tile {
+  margin: 0 15px;
+}
+
+.tile-icon {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  width: 40px;
+  height: 40px;
+
+  color: #fff;
+  border-radius: 2px;
+  background: #3d8b40;
+
+  font-size: 18pt;
+
+  -webkit-align-content: space-around;
+  align-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -ms-flex-line-pack: distribute;
+}
+
+.tile-subtitle {
+  color: gray;
+
+  font-size: 10pt;
+}
+
+.tile-action .btn {
+  padding: 5px;
 }
 
 footer {
