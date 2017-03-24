@@ -34,13 +34,11 @@ blockquote {
 
 article img {
   float: left;
-
   margin: 0 20px 15px 0;
 }
 
 article p {
   text-indent: 10px;
-
   line-height: 18px;
 }
 
@@ -50,7 +48,6 @@ article p {
 
 .tab-section {
   display: none;
-
   width: 100%;
 }
 

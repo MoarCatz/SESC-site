@@ -1,11 +1,13 @@
 header {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-
-  width: 100%;
-
   background: #f6f6f6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-left {
+  flex: 2 !important;
 }
 
 header .menu li {
@@ -17,8 +19,8 @@ a.btn-primary.show-md {
 }
 
 main {
-  width: 100;
   margin: 52px 10px 0 250px;
+  width: 100;
 }
 
 @media only screen and (max-width: 960px) {
@@ -26,12 +28,19 @@ main {
     margin-left: 39px;
   }
 
-  td {
+  td, th {
     font-size: 8pt;
   }
+}
 
-  #achievments + article table {
-    max-width: 60%;
+@media only screen and (max-width: 480px) {
+  .nav-left {
+    flex: 0 2 0 !important;
+  }
+
+  #staff + article .label {
+    margin: 2px 5px;
+    text-align: center;
   }
 }
 
@@ -46,10 +55,9 @@ aside.hide-lg {
 }
 
 aside.show-lg {
+  width: 39px;
   top: 52px;
   left: 0;
-
-  width: 39px;
 }
 
 aside i {
@@ -57,8 +65,8 @@ aside i {
 }
 
 #logo {
-  width: 20px;
   margin: 0 15px;
+  width: 20px;
 }
 
 .no-outline:focus {
@@ -94,6 +102,10 @@ table code {
   color: #000;
 }
 
+article {
+  margin-bottom: 10px;
+}
+
 article p {
   text-indent: 10px;
 }
@@ -110,22 +122,15 @@ article section p {
   line-height: 13pt;
 }
 
+.hymn p {
+  font-style: italic;
+  text-indent: 0;
+  line-height: 15pt;
+}
+
 #achievments + article h6 {
-  margin: 0;
-
   text-align: center;
-}
-
-#achievments + article th,
-#achievments + article td
-{
-  padding: 5px 10px;
-
-  font-size: 9pt;
-}
-
-#achievments + article td:nth-child(2) {
-  text-align: center !important;
+  margin: 0;
 }
 
 a.active {
@@ -133,46 +138,91 @@ a.active {
 }
 
 .anchor {
-  visibility: hidden;
-
   height: 52px;
   margin-top: -52px;
+  visibility: hidden;
 }
 
 .tile {
-  margin: 0 15px;
+  margin: 10px 15px;
 }
 
 .tile-icon {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-
-  width: 40px;
-  height: 40px;
-
-  color: #fff;
-  border-radius: 2px;
-  background: #3d8b40;
-
-  font-size: 18pt;
-
   -webkit-align-content: space-around;
   align-content: space-around;
   -webkit-align-items: center;
   align-items: center;
+  background: #3d8b40;
+  border-radius: 2px;
+  color: #fff;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   -ms-flex-align: center;
   -ms-flex-line-pack: distribute;
+  font-size: 18pt;
+  height: 40px;
+  width: 40px;
 }
 
 .tile-subtitle {
   color: gray;
-
   font-size: 10pt;
 }
 
 .tile-action .btn {
   padding: 5px;
+}
+
+.tile-mini .tile-icon {
+  height: 26px;
+  width: 26px;
+  font-size: 12pt;
+}
+
+.divider.text-center {
+  border-color: #bbb;
+}
+
+.divider.text-center::before {
+  color: #3d8b40;
+}
+
+.tile-content.columns,
+.m0 {
+  margin: 0;
+}
+
+article td {
+  padding: 7px 10px !important;
+}
+
+#units + article td:first-child,
+#units + article td:last-child,
+#units + article td:nth-child(4),
+#staff + article td:nth-child(n+4) {
+  text-align: center !important;
+}
+
+#units + article td:nth-child(3) {
+  font-weight: bold;
+}
+
+#units + article table {
+  margin-bottom: 15px;
+}
+
+#units + article p,
+#first-aid + article p {
+  text-indent: 0;
+}
+
+#staff + article form {
+  margin: 0 20px;
+}
+
+#staff + article .tile {
+  margin: 10px 5px;
 }
 
 footer {
