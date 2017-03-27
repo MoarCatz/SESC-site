@@ -1,0 +1,192 @@
+header {
+  background: #f6f6f6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-left {
+  flex: 2 !important;
+}
+
+header .menu li {
+  margin: 0;
+}
+
+a.btn-primary.show-md {
+  padding: 5px 6px;
+}
+
+main {
+  margin: 52px 10px 0 280px;
+}
+
+@media only screen and (max-width: 960px) {
+  main {
+    margin-left: 39px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-left {
+    flex: 0 2 0 !important;
+  }
+
+  #staff + article .label {
+    margin: 2px 5px;
+    text-align: center;
+  }
+}
+
+aside {
+  position: fixed;
+  top: 57px;
+  left: 10px;
+}
+
+aside.hide-lg {
+  width: 280;
+  font-size: 10pt;
+}
+
+aside.show-lg {
+  width: 39px;
+  top: 52px;
+  left: 0;
+  height: calc(100% - 23px - 52px);
+  min-height: 200px;
+  overflow-y: scroll;
+}
+
+aside i {
+  font-size: 17pt;
+}
+
+aside .nav {
+  margin: 0;
+}
+
+#logo {
+  margin: 0 15px;
+  width: 20px;
+}
+
+.no-outline:focus {
+  box-shadow: none;
+}
+
+.maintext {
+  border: 0 solid #EEE;
+  border-left-width: 1px;
+}
+
+aside h6,
+.maintext h4,
+.card-header h6 {
+  margin: 0;
+}
+
+.maintext h3,
+.maintext h4,
+.maintext h6 {
+  color: #3d8b40;
+}
+
+.maintext h6 {
+  margin-bottom: 5px;
+}
+
+section ul {
+  margin: 10px;
+}
+
+table code {
+  color: #000;
+}
+
+.anchor + article {
+  margin-bottom: 30px;
+}
+
+article p {
+  text-indent: 10px;
+}
+
+article section p {
+  line-height: 13pt;
+}
+
+a.active {
+  text-decoration: none;
+}
+
+.anchor {
+  height: 52px;
+  margin-top: -52px;
+  visibility: hidden;
+}
+
+.tile {
+  margin: 10px 15px;
+}
+
+.tile-icon {
+  -webkit-align-content: space-around;
+  align-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  background: #3d8b40;
+  border-radius: 2px;
+  color: #fff;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -ms-flex-align: center;
+  -ms-flex-line-pack: distribute;
+  font-size: 18pt;
+  height: 40px;
+  width: 40px;
+}
+
+.tile-subtitle {
+  color: gray;
+  font-size: 10pt;
+}
+
+.tile-action .btn {
+  padding: 5px;
+}
+
+.tile-mini .tile-icon {
+  height: 26px;
+  width: 26px;
+  font-size: 12pt;
+}
+
+.divider.text-center {
+  border-color: #bbb;
+}
+
+.divider.text-center::before {
+  color: #3d8b40;
+}
+
+.tile-content.columns,
+.m0 {
+  margin: 0;
+}
+
+article td {
+  padding: 7px 10px !important;
+}
+
+.no-files {
+  color: #aaa;
+}
+
+footer {
+  border: 0 solid #4CAF50;
+  border-top-width: 3px;
+  background: rgba(0, 0, 0, 0.7);
+}
