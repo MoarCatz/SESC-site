@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	//ScrollSpy
-	$('.anchor').on('scrollSpy:enter', function() {
+	$('.anchor:visible:first').on('scrollSpy:enter', function() {
 		$('.nav .nav-item').removeClass('active');
 		$('a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
 	});
