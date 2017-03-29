@@ -1,0 +1,7 @@
+#plan + article li {
+    list-style: none;
+}
+
+#plan + article h6 {
+    margin: 10px 0;
+}
