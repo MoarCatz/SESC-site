@@ -2,11 +2,16 @@
   padding: 8px;
 }
 
-#plan + article li {
-    margin: 0;
-    padding-top: 5px;
-
+#plan + article ul {
     list-style: none;
+    margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  #plan + article button {
+    padding: 5px 0;
+    font-size: 10pt;
+  }
 }
 
 #plan + article h6 {
