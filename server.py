@@ -16,6 +16,10 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/departments/')
+def departments():
+    return render_template('departments.html')
+
 @app.route('/commercial/')
 def commercial():
     return render_template('commercial.html')

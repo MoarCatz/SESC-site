@@ -1,578 +1,496 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends "base.html" %}
+{% block title %}Кафедры{% endblock %}
+{% block css %}<link href="{{ url_for('static', filename='css/departments.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
 
-<head>
-  <title>СУНЦ УрФУ | Официальный сайт</title>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon">
-  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="assets/css/spectre.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/common.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/departments.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-</head>
+{% block pc_nav %}
+  {% for id, name in [('plan', 'Учебные планы и программы'),
+                      ('human', 'Кафедра гуманитарного образования'),
+                      ('philo', 'Кафедра филологии'),
+                      ('math', 'Кафедра математики'),
+                      ('it', 'Кафедра информатики'),
+                      ('physics', 'Кафедра физики и астрономии'),
+                      ('bio', 'Кафедра химии и биологии'),
+                      ('lang', 'Кафедра иностранных языков'),
+                      ('pe', 'Кафедра психофизической культуры')] %}
+    {% if loop.index == 1 %}
+      <li class="nav-item active">
+        <a href="#{{ id }}">{{ name }}</a>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a href="#{{ id }}">{{ name }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
 
-<body>
-  <header>
-    <section class="grid-header container grid-960 pt-10 pb-10">
-      <nav class="navbar">
-        <section class="nav-left navbar-section">
-          <a class="no-outline" href="index.html"><img alt="СУНЦ УрФУ" class="img-responsive" id="logo" src="assets/img/logo-no-text.png"></a>
-          <div class="hide-md">
-            <a class="btn btn-link" href="about.html">О нас</a><!--
-            --><a class="btn btn-link" href="study.html">Учёба</a><!--
-            --><a class="btn btn-link" href="departments.html">Кафедры</a><!--
-            --><a class="btn btn-link" href="commercial.html">ОДПО</a><!--
-            --><a class="btn btn-link" href="contests.html">Соревнования</a>
+{% block mob_nav %}
+  {% for id, icon in [('plan', 'assignment'),
+                      ('human', 'class'),
+                      ('philo', 'sort_by_alpha'),
+                      ('math', 'functions'),
+                      ('it', 'laptop'),
+                      ('physics', 'settings'),
+                      ('bio', 'local_florist'),
+                      ('lang', 'language'),
+                      ('pe', 'fitness_center')] %}
+    {% if loop.index == 1 %}
+      <li class="nav-item active">
+        <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+  <div class="anchor" id="plan"></div>
+  <article>
+    <h3>Учебные планы и программы</h3>
+    <div class="divider"></div>
+    <div class="columns">
+      <div class="col-7 col-md-12">
+        <div class="tile tile-centered">
+          <div class="tile-icon">
+            <i class="icon icon-insert_drive_file centered"></i>
           </div>
-        </section>
-        <section class="navbar-section">
-          <div class="dropdown">
-            <div class="btn-group">
-              <a class="btn btn-primary" href="apply.html" target="_blank">Как поступить?</a> <a class="btn btn-primary show-md dropdown-toggle" tabindex="0"><i class="icon icon-menu"></i></a>
-              <ul class="menu">
-                <li>
-                  <a class="btn btn-link" href="about.html">О нас</a>
-                </li>
-                <li>
-                  <a class="btn btn-link" href="study.html">Учёба</a>
-                </li>
-                <li>
-                  <a class="btn btn-link" href="departments.html">Кафедры</a>
-                </li>
-                <li>
-                  <a class="btn btn-link" href="commercial.html">ОДПО</a>
-                </li>
-                <li>
-                  <a class="btn btn-link" href="contests.html">Соревнования</a>
-                </li>
-              </ul>
-            </div>
+          <div class="tile-content">
+            <div class="tile-title">Учебный план СУНЦ</div>
+            <div class="tile-subtitle">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
           </div>
-        </section>
-      </nav>
-    </section>
-  </header>
-  <main>
-    <aside class="hide-lg">
-      <div class="sidebar">
-        <ul class="nav">
-          <li class="nav-item active">
-            <a href="#plan">Учебные планы и программы</a>
-          </li>
-          <li class="nav-item">
-            <a href="#human">Кафедра гуманитарного образования</a>
-          </li>
-          <li class="nav-item">
-            <a href="#philo">Кафедра филологии</a>
-          </li>
-          <li class="nav-item">
-            <a href="#math">Кафедра математики</a>
-          </li>
-          <li class="nav-item">
-            <a href="#it">Кафедра информатики</a>
-          </li>
-          <li class="nav-item">
-            <a href="#physics">Кафедра физики и астрономии</a>
-          </li>
-          <li class="nav-item">
-            <a href="#bio">Кафедра химии и биологии</a>
-          </li>
-          <li class="nav-item">
-            <a href="#lang">Кафедра иностранных языков</a>
-          </li>
-          <li class="nav-item">
-            <a href="#pe">Кафедра психофизической культуры</a>
-          </li>
-        </ul>
+          <div class="tile-action">
+            <a href="#" class="btn btn-link">
+              <i class="icon icon-get_app"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </aside>
-    <aside class="show-lg">
-      <div class="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="#plan"><i class="icon icon-assignment"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#human"><i class="icon icon-class"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#philo"><i class="icon icon-sort_by_alpha"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#math"><i class="icon icon-functions"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#it"><i class="icon icon-laptop"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#physics"><i class="icon icon-settings"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#bio"><i class="icon icon-local_florist"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#lang"><i class="icon icon-language"></i></a>
-          </li>
-          <li class="nav-item">
-            <a href="#pe"><i class="icon icon-fitness_center"></i></a>
-          </li>
-        </ul>
+    </div>
+    <h6>Программы учебных предметов и курсов</h6>
+    <ul>
+      <li>
+        <button class="btn btn-link">
+          <i class="icon icon-keyboard_arrow_right"></i>
+          <span>Кафедра гуманитарного образования</span>
+        </button>
+        <div class="expandable">
+          <div class="tile tile-centered tile-mini">
+            <div class="tile-icon">
+              <i class="icon icon-description centered"></i>
+            </div>
+            <div class="tile-content columns">
+              <div class="tile-title col-8 col-lg-12">Обществознание 8-9</div>
+              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
+            </div>
+            <div class="tile-action">
+              <a href="#" class="btn btn-link">
+                <i class="icon icon-get_app"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="btn btn-link">
+          <i class="icon icon-keyboard_arrow_right"></i>
+          <span>Кафедра филологии</span>
+        </button>
+        <div class="expandable">
+          <div class="tile tile-centered tile-mini">
+            <div class="tile-icon">
+              <i class="icon icon-insert_drive_file centered"></i>
+            </div>
+            <div class="tile-content columns">
+              <div class="tile-title col-8 col-lg-12">9 литература профильный уровень</div>
+              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+            </div>
+            <div class="tile-action">
+              <a href="#" class="btn btn-link">
+                <i class="icon icon-get_app"></i>
+              </a>
+            </div>
+          </div>
+          <div class="tile tile-centered tile-mini">
+            <div class="tile-icon">
+              <i class="icon icon-insert_drive_file centered"></i>
+            </div>
+            <div class="tile-content columns">
+              <div class="tile-title col-8 col-lg-12">10 литература базовый уровень</div>
+              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+            </div>
+            <div class="tile-action">
+              <a href="#" class="btn btn-link">
+                <i class="icon icon-get_app"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="btn btn-link">
+          <i class="icon icon-keyboard_arrow_right"></i>
+          <span>Кафедра математики</span>
+        </button>
+        <div class="expandable">
+          <div class="tile tile-centered tile-mini">
+            <div class="tile-icon">
+              <i class="icon icon-insert_drive_file centered"></i>
+            </div>
+            <div class="tile-content columns">
+              <div class="tile-title col-8 col-lg-12"> 11 физико-математический и физико-технический классы ОДПО (программа доп. образования)</div>
+              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+            </div>
+            <div class="tile-action">
+              <a href="#" class="btn btn-link">
+                <i class="icon icon-get_app"></i>
+              </a>
+            </div>
+          </div>
+          <div class="tile tile-centered tile-mini">
+            <div class="tile-icon">
+              <i class="icon icon-insert_drive_file centered"></i>
+            </div>
+            <div class="tile-content columns">
+              <div class="tile-title col-8 col-lg-12">11 естественнонаучный, химико-биологический и социально-экономический классы ОДПО (программа доп. образования)</div>
+              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+            </div>
+            <div class="tile-action">
+              <a href="#" class="btn btn-link">
+                <i class="icon icon-get_app"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="btn btn-link disabled">
+          <i class="icon icon-keyboard_arrow_right"></i>
+          <span>Кафедра информатики</span>
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-link disabled">
+          <i class="icon icon-keyboard_arrow_right"></i>
+          <span>Кафедра физики и астрономии</span>
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-link disabled">
+          <i class="icon icon-keyboard_arrow_right disabled"></i>
+          <span>Кафедра химии и биологии</span>
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-link disabled">
+          <i class="icon icon-keyboard_arrow_right disabled"></i>
+          <span>Кафедра иностранных языков</span>
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-link disabled">
+          <i class="icon icon-keyboard_arrow_right"></i>
+          <span>Кафедра психофизической культуры</span>
+        </button>
+      </li>
+    </ul>
+  </article>
+
+  <div class="anchor" id="human"></div>
+  <article>
+    <h3>Кафедра гуманитарного образования</h3>
+    <div class="divider"></div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-description centered"></i>
       </div>
-    </aside>
-    <section class="maintext">
-      <div class="ml-10 mt-10">
-        <div class="anchor" id="plan"></div>
-        <article>
-          <h3>Учебные планы и программы</h3>
-          <div class="divider"></div>
-          <div class="columns">
-            <div class="col-7 col-md-12">
-              <div class="tile tile-centered">
-                <div class="tile-icon">
-                  <i class="icon icon-insert_drive_file centered"></i>
-                </div>
-                <div class="tile-content">
-                  <div class="tile-title">Учебный план СУНЦ</div>
-                  <div class="tile-subtitle">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-                </div>
-                <div class="tile-action">
-                  <a href="#" class="btn btn-link">
-                    <i class="icon icon-get_app"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h6>Программы учебных предметов и курсов</h6>
-          <ul>
-            <li>
-              <button class="btn btn-link">
-                <i class="icon icon-keyboard_arrow_right"></i>
-                <span>Кафедра гуманитарного образования</span>
-              </button>
-              <div class="expandable">
-                <div class="tile tile-centered tile-mini">
-                  <div class="tile-icon">
-                    <i class="icon icon-description centered"></i>
-                  </div>
-                  <div class="tile-content columns">
-                    <div class="tile-title col-8 col-lg-12">Обществознание 8-9</div>
-                    <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
-                  </div>
-                  <div class="tile-action">
-                    <a href="#" class="btn btn-link">
-                      <i class="icon icon-get_app"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button class="btn btn-link">
-                <i class="icon icon-keyboard_arrow_right"></i>
-                <span>Кафедра филологии</span>
-              </button>
-              <div class="expandable">
-                <div class="tile tile-centered tile-mini">
-                  <div class="tile-icon">
-                    <i class="icon icon-insert_drive_file centered"></i>
-                  </div>
-                  <div class="tile-content columns">
-                    <div class="tile-title col-8 col-lg-12">9 литература профильный уровень</div>
-                    <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-                  </div>
-                  <div class="tile-action">
-                    <a href="#" class="btn btn-link">
-                      <i class="icon icon-get_app"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="tile tile-centered tile-mini">
-                  <div class="tile-icon">
-                    <i class="icon icon-insert_drive_file centered"></i>
-                  </div>
-                  <div class="tile-content columns">
-                    <div class="tile-title col-8 col-lg-12">10 литература базовый уровень</div>
-                    <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-                  </div>
-                  <div class="tile-action">
-                    <a href="#" class="btn btn-link">
-                      <i class="icon icon-get_app"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button class="btn btn-link">
-                <i class="icon icon-keyboard_arrow_right"></i>
-                <span>Кафедра математики</span>
-              </button>
-              <div class="expandable">
-                <div class="tile tile-centered tile-mini">
-                  <div class="tile-icon">
-                    <i class="icon icon-insert_drive_file centered"></i>
-                  </div>
-                  <div class="tile-content columns">
-                    <div class="tile-title col-8 col-lg-12"> 11 физико-математический и физико-технический классы ОДПО (программа доп. образования)</div>
-                    <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-                  </div>
-                  <div class="tile-action">
-                    <a href="#" class="btn btn-link">
-                      <i class="icon icon-get_app"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="tile tile-centered tile-mini">
-                  <div class="tile-icon">
-                    <i class="icon icon-insert_drive_file centered"></i>
-                  </div>
-                  <div class="tile-content columns">
-                    <div class="tile-title col-8 col-lg-12">11 естественнонаучный, химико-биологический и социально-экономический классы ОДПО (программа доп. образования)</div>
-                    <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-                  </div>
-                  <div class="tile-action">
-                    <a href="#" class="btn btn-link">
-                      <i class="icon icon-get_app"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button class="btn btn-link disabled">
-                <i class="icon icon-keyboard_arrow_right"></i>
-                <span>Кафедра информатики</span>
-              </button>
-            </li>
-            <li>
-              <button class="btn btn-link disabled">
-                <i class="icon icon-keyboard_arrow_right"></i>
-                <span>Кафедра физики и астрономии</span>
-              </button>
-            </li>
-            <li>
-              <button class="btn btn-link disabled">
-                <i class="icon icon-keyboard_arrow_right disabled"></i>
-                <span>Кафедра химии и биологии</span>
-              </button>
-            </li>
-            <li>
-              <button class="btn btn-link disabled">
-                <i class="icon icon-keyboard_arrow_right disabled"></i>
-                <span>Кафедра иностранных языков</span>
-              </button>
-            </li>
-            <li>
-              <button class="btn btn-link disabled">
-                <i class="icon icon-keyboard_arrow_right"></i>
-                <span>Кафедра психофизической культуры</span>
-              </button>
-            </li>
-          </ul>
-        </article>
-
-        <div class="anchor" id="human"></div>
-        <article>
-          <h3>Кафедра гуманитарного образования</h3>
-          <div class="divider"></div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-description centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">А.Л. Соловьев: Форсированный курс в СССР</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-grid_on centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Формы предприятий (ск по обществу)</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Таблица Excel <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-        </article>
-
-        <div class="anchor" id="philo"></div>
-        <article>
-          <h3>Кафедра филологии</h3>
-          <div class="divider"></div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-language centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Список литературы для учащихся 11 (негуманитарных) классов</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> HTML-страница <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-folder_open centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Правила русской орфографии и пунктуации</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> ZIP-архив <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-        </article>
-
-        <div class="anchor" id="math"></div>
-        <article>
-          <h3>Кафедра математики</h3>
-          <div class="divider"></div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-insert_drive_file centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Вопросы к устному экзамену по геометрии для 9б, 9в, 9е</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-insert_drive_file centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Задачи для 11-з для подготовки к ЕГЭ</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-        </article>
-
-        <div class="anchor" id="it"></div>
-        <article>
-          <h3>Кафедра информатики</h3>
-          <div class="divider"></div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-description centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Сириус. Задания для 8Л, 8С, 9Л, 9В, 10В (гр.Ю.О.Казаковой)</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-settings_applications centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Исполнитель Паркетчик</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Программа <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-        </article>
-
-        <div class="anchor" id="physics"></div>
-        <article>
-          <h3>Кафедра физики и астрономии</h3>
-          <div class="divider"></div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-description centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Первый семестр 2016-2017 уч.года. 10В класс. Вопросы к экзамену</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-link centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Физическое шоу (видео)</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">Ссылка <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-exit_to_app"></i>
-              </a>
-            </div>
-          </div>
-
-        </article>
-
-        <div class="anchor" id="bio"></div>
-        <article>
-          <h3>Кафедра химии и биологии</h3>
-          <div class="divider"></div>
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-insert_drive_file centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Учебник по органической химии, Черемичкина И. А., Гусева А. Ф.</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-crop_original centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Периодическая система элементов Д. И. Менделеева</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> JPG-изображение <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <div class="anchor" id="lang"></div>
-        <article>
-          <h3>Кафедра иностранных языков</h3>
-          <div class="divider"></div>
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-insert_drive_file centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Патрушева Л.П. Задания для обучающихся, отбывающих в Сириусе</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-insert_drive_file centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">Охотникова А.В. Задания для обучающихся, отбывающих в Сириусе</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <div class="anchor" id="pe"></div>
-        <article>
-          <h3>Кафедра психофизической культуры</h3>
-          <div class="divider"></div>
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-description centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">ОБЖ. Занятие 2.6. Первая помощь</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-get_app"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="tile tile-centered tile-mini">
-            <div class="tile-icon">
-              <i class="icon icon-link centered"></i>
-            </div>
-            <div class="tile-content columns">
-              <div class="tile-title col-8 col-lg-12">10-й юбилейный турнир по баскетболу среди выпускников и учащихся СУНЦ УрФУ (видео)</div>
-              <div class="tile-subtitle col-4 hide-lg text-right">Ссылка <b>·</b> 01 янв 2017</div>
-            </div>
-            <div class="tile-action">
-              <a href="#" class="btn btn-link">
-                <i class="icon icon-exit_to_app"></i>
-              </a>
-            </div>
-          </div>
-        </article>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">А.Л. Соловьев: Форсированный курс в СССР</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="pt-10 pb-10"></div>
-  </footer>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
 
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-grid_on centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Формы предприятий (ск по обществу)</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Таблица Excel <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="anchor" id="philo"></div>
+  <article>
+    <h3>Кафедра филологии</h3>
+    <div class="divider"></div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-language centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Список литературы для учащихся 11 (негуманитарных) классов</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> HTML-страница <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-folder_open centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Правила русской орфографии и пунктуации</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> ZIP-архив <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="anchor" id="math"></div>
+  <article>
+    <h3>Кафедра математики</h3>
+    <div class="divider"></div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-insert_drive_file centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Вопросы к устному экзамену по геометрии для 9б, 9в, 9е</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-insert_drive_file centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Задачи для 11-з для подготовки к ЕГЭ</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="anchor" id="it"></div>
+  <article>
+    <h3>Кафедра информатики</h3>
+    <div class="divider"></div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-description centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Сириус. Задания для 8Л, 8С, 9Л, 9В, 10В (гр.Ю.О.Казаковой)</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-settings_applications centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Исполнитель Паркетчик</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Программа <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="anchor" id="physics"></div>
+  <article>
+    <h3>Кафедра физики и астрономии</h3>
+    <div class="divider"></div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-description centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Первый семестр 2016-2017 уч.года. 10В класс. Вопросы к экзамену</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-link centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Физическое шоу (видео)</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">Ссылка <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-exit_to_app"></i>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="anchor" id="bio"></div>
+  <article>
+    <h3>Кафедра химии и биологии</h3>
+    <div class="divider"></div>
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-insert_drive_file centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Учебник по органической химии, Черемичкина И. А., Гусева А. Ф.</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-crop_original centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Периодическая система элементов Д. И. Менделеева</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> JPG-изображение <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <div class="anchor" id="lang"></div>
+  <article>
+    <h3>Кафедра иностранных языков</h3>
+    <div class="divider"></div>
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-insert_drive_file centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Патрушева Л.П. Задания для обучающихся, отбывающих в Сириусе</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-insert_drive_file centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">Охотникова А.В. Задания для обучающихся, отбывающих в Сириусе</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <div class="anchor" id="pe"></div>
+  <article>
+    <h3>Кафедра психофизической культуры</h3>
+    <div class="divider"></div>
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-description centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">ОБЖ. Занятие 2.6. Первая помощь</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">14 МБ <b>·</b> Документ Word <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-get_app"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="tile tile-centered tile-mini">
+      <div class="tile-icon">
+        <i class="icon icon-link centered"></i>
+      </div>
+      <div class="tile-content columns">
+        <div class="tile-title col-8 col-lg-12">10-й юбилейный турнир по баскетболу среди выпускников и учащихся СУНЦ УрФУ (видео)</div>
+        <div class="tile-subtitle col-4 hide-lg text-right">Ссылка <b>·</b> 01 янв 2017</div>
+      </div>
+      <div class="tile-action">
+        <a href="#" class="btn btn-link">
+          <i class="icon icon-exit_to_app"></i>
+        </a>
+      </div>
+    </div>
+  </article>
+{% endblock %}
+
+{% block js %}
   <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src='assets/js/expand-section.js'></script>
-  <script src="assets/js/common.js"></script>
-</body>
-
-</html>
+  <script src="{{ url_for('static', filename='js/expand-section.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+{% endblock %}
