@@ -6,9 +6,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
   <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-  <link href="assets/css/spectre.css" type="text/css" rel="stylesheet" />
-  <link href="assets/css/main.css" type="text/css" rel="stylesheet" />
-  <link href="assets/css/icons.css" type="text/css" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/spectre.css') }}" type="text/css" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/main.css') }}" type="text/css" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='css/icons.css') }}" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <!-- SESC Logo -->
     <section class="navbar-primary" id="logo">
       <a class="header-logo no-outline" href="#">
-        <img class="img-responsive" src="assets/img/logo.svg" alt="СУНЦ УрФУ">
+        <img class="img-responsive" src="{{ url_for('static', filename='img/logo.svg') }}" alt="СУНЦ УрФУ">
       </a>
     </section>
 
@@ -139,7 +139,7 @@
               </div>
             </div>
 
-            <img class="img-responsive rounded" src="assets/img/000664.jpg" alt="Фото новости" />
+            <img class="img-responsive rounded" src="{{ url_for('static', filename='img/000664.jpg') }}" alt="Фото новости" />
 
             <p>
               ОДПО отметило 8 Марта. Немного перефразируя слова одной известной песенки — «Из чего же, из чего же, из чего же cделаны СУНЦа девчонки? Из стремлений и сражений, из упорства и достижений сделаны СУНЦа девчонки!»
@@ -179,7 +179,7 @@
 
           <div class="tile">
             <div class="tile-icon">
-              <img class="image-responsive rounded" src="assets/img/000658.jpg" alt="Фото новости" />
+              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000658.jpg') }}" alt="Фото новости" />
             </div>
             <div class="tile-content">
               <p class="tile-title">
@@ -200,7 +200,7 @@
 
           <div class="tile">
             <div class="tile-icon">
-              <img class="image-responsive rounded" src="assets/img/000657.jpg" alt="Фото новости" />
+              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000657.jpg') }}" alt="Фото новости" />
             </div>
             <div class="tile-content">
               <p class="tile-title">
@@ -221,7 +221,7 @@
 
           <div class="tile">
             <div class="tile-icon">
-              <img class="image-responsive rounded" src="assets/img/000656.jpg" alt="Фото новости" />
+              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000656.jpg') }}" alt="Фото новости" />
             </div>
             <div class="tile-content">
               <p class="tile-title">
@@ -242,7 +242,7 @@
 
           <div class="tile">
             <div class="tile-icon">
-              <img class="image-responsive rounded" src="assets/img/000655.jpg" alt="Фото новости" />
+              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000655.jpg') }}" alt="Фото новости" />
             </div>
             <div class="tile-content">
               <p class="tile-title">
@@ -263,7 +263,7 @@
 
           <div class="tile">
             <div class="tile-icon">
-              <img class="image-responsive rounded" src="assets/img/000654.jpg" alt="Фото новости" />
+              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000654.jpg') }}" alt="Фото новости" />
             </div>
             <div class="tile-content">
               <p class="tile-title">
