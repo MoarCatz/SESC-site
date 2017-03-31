@@ -3,8 +3,12 @@
 }
 
 #plan + article ul {
-    list-style: none;
-    margin: 0;
+  list-style: none;
+  margin: 0;
+}
+
+#plan + article li {
+  margin: 0;
 }
 
 @media only screen and (max-width: 480px) {
