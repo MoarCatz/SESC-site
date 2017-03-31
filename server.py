@@ -28,6 +28,10 @@ def departments():
 def commercial():
     return render_template('commercial.html')
 
+@app.route('/contests/')
+def contests():
+    return render_template('contests.html')
+
 @app.route('/apply/')
 def apply():
     pass
