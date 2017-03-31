@@ -5,8 +5,9 @@
 }
 
 .hymn p {
-  font-style: italic;
   text-indent: 0;
+
+  font-style: italic;
   line-height: 15pt;
 }
 
@@ -15,8 +16,9 @@ figure {
 }
 
 #achievments + article h6 {
-  text-align: center;
   margin: 0;
+
+  text-align: center;
 }
 
 #units + article td:first-child,

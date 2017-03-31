@@ -3,22 +3,26 @@ html {
 }
 
 body {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+
+  min-height: 100%;
 }
 
 main {
-  flex: 1;
   padding: 20px;
+
+  flex: 1;
 }
 
 header {
-  background: #f6f6f6;
   position: fixed;
-  top: 0;
-  width: 100%;
   z-index: 1;
+  top: 0;
+
+  width: 100%;
+
+  background: #f6f6f6;
 }
 
 .nav-left {
@@ -50,6 +54,7 @@ main {
 
   #staff + article .label {
     margin: 2px 5px;
+
     text-align: center;
   }
 }
@@ -62,16 +67,19 @@ aside {
 
 aside.hide-lg {
   width: 280;
+
   font-size: 10pt;
 }
 
 aside.show-lg {
-  width: 39px;
   top: 52px;
   left: 0;
+
+  overflow-y: scroll;
+
+  width: 39px;
   height: calc(100% - 23px - 52px);
   min-height: 200px;
-  overflow-y: scroll;
 }
 
 aside i {
@@ -83,8 +91,8 @@ aside .nav {
 }
 
 #logo {
-  margin: 0 15px;
   width: 20px;
+  margin: 0 15px;
 }
 
 .no-outline:focus {
@@ -137,9 +145,10 @@ a.active {
 }
 
 .anchor {
+  visibility: hidden;
+
   height: 52px;
   margin-top: -52px;
-  visibility: hidden;
 }
 
 .tile {
@@ -147,25 +156,30 @@ a.active {
 }
 
 .tile-icon {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  width: 40px;
+  height: 40px;
+
+  color: #fff;
+  border-radius: 2px;
+  background: #3d8b40;
+
+  font-size: 18pt;
+
   -webkit-align-content: space-around;
   align-content: space-around;
   -webkit-align-items: center;
   align-items: center;
-  background: #3d8b40;
-  border-radius: 2px;
-  color: #fff;
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   -ms-flex-align: center;
   -ms-flex-line-pack: distribute;
-  font-size: 18pt;
-  height: 40px;
-  width: 40px;
 }
 
 .tile-subtitle {
   color: gray;
+
   font-size: 10pt;
 }
 
@@ -174,8 +188,9 @@ a.active {
 }
 
 .tile-mini .tile-icon {
-  height: 26px;
   width: 26px;
+  height: 26px;
+
   font-size: 12pt;
 }
 
