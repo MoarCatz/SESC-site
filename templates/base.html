@@ -22,9 +22,9 @@
         <section class="nav-left navbar-section">
           <a class="no-outline" href="{{ url_for('index') }}"><img alt="СУНЦ УрФУ" class="img-responsive" id="logo" src="{{ url_for('static', filename='img/logo-no-text.png') }}"></a>
           <div class="hide-md">
-            {% for href, name in [('about.html', 'О нас'), ('study.html', 'Учёба'),
-                                  ('departments.html', 'Кафедры'), ('commercial.html', 'ОДПО'),
-                                  ('contests.html', 'Соревнования')] %}
+            {% for href, name in [('/about', 'О нас'), ('/study', 'Учёба'),
+                                  ('/departments', 'Кафедры'), ('/commercial', 'ОДПО'),
+                                  ('/contests', 'Соревнования')] %}
               {% if loop.index == 1 %}
                 <a class="btn btn-link" href="{{ href }}">{{ name }}</a><!--
               {% elif loop.index == 5 %}
@@ -38,7 +38,7 @@
         <section class="navbar-section">
           <div class="dropdown">
             <div class="btn-group">
-              <a class="btn btn-primary" href="apply.html" target="_blank">Как поступить?</a> <a class="btn btn-primary show-md dropdown-toggle" tabindex="0"><i class="icon icon-menu"></i></a>
+              <a class="btn btn-primary" href="/apply" target="_blank">Как поступить?</a> <a class="btn btn-primary show-md dropdown-toggle" tabindex="0"><i class="icon icon-menu"></i></a>
               <ul class="menu">
               {% for href, name in [('about.html', 'О нас'), ('study.html', 'Учёба'),
                                     ('departments.html', 'Кафедры'), ('commercial.html', 'ОДПО'),
