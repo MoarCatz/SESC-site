@@ -2,7 +2,8 @@
 {% block title %}ОДПО{% endblock %}
 
 {% block pc_nav %}
-  {% for id, name in [('about', 'ОДПО'), ('docs', 'Документы')] %}
+  {% for id, name in [('about', 'ОДПО'),
+                      ('docs', 'Документы')] %}
     {% if loop.index == 1 %}
       <li class="nav-item active">
         <a href="#{{ id }}">{{ name }}</a>
@@ -16,7 +17,8 @@
 {% endblock %}
 
 {% block mob_nav %}
-  {% for id, icon in [('about', 'help'), ('docs', 'class')] %}
+  {% for id, icon in [('about', 'help'),
+                      ('docs', 'class')] %}
     {% if loop.index == 1 %}
       <li class="nav-item active">
         <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
