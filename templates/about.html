@@ -3,10 +3,14 @@
 {% block css %}<link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
 
 {% block pc_nav %}
-  {% for id, name in [('about', 'О нас'), ('achievments', 'Достижения'),
-                      ('graduates', 'Выпускники'), ('history', 'История'),
-                      ('staff', 'Сотрудники'), ('jobs', 'Вакансии'),
-                      ('dorm', 'Общежитие'), ('first-aid', 'Медицинский пункт'),
+  {% for id, name in [('about', 'О нас'),
+                      ('achievments', 'Достижения'),
+                      ('graduates', 'Выпускники'),
+                      ('history', 'История'),
+                      ('staff', 'Сотрудники'),
+                      ('jobs', 'Вакансии'),
+                      ('dorm', 'Общежитие'),
+                      ('first-aid', 'Медицинский пункт'),
                       ('pay_details', 'Общие и платёжные реквизиты'),
                       ('docs', 'Документы')] %}
     {% if loop.index == 1 %}
@@ -22,10 +26,14 @@
 {% endblock %}
 
 {% block mob_nav %}
-  {% for id, icon in [('about', 'info'), ('achievments', 'star'),
-                      ('graduates', 'school'), ('history', 'class'),
-                      ('staff', 'people'), ('jobs', 'work'),
-                      ('dorm', 'local_hotel'), ('first-aid', 'local_hospital'),
+  {% for id, icon in [('about', 'info'),
+                      ('achievments', 'star'),
+                      ('graduates', 'school'),
+                      ('history', 'class'),
+                      ('staff', 'people'),
+                      ('jobs', 'work'),
+                      ('dorm', 'local_hotel'),
+                      ('first-aid', 'local_hospital'),
                       ('pay_details', 'account_balance_wallet'),
                       ('docs', 'insert_drive_file')] %}
     {% if loop.index == 1 %}
