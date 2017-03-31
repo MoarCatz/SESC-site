@@ -19,3 +19,7 @@ def about():
 @app.route('/apply/')
 def apply():
     pass
+
+@app.route('/contact/')
+def contact():
+    return render_template('contact.html')
