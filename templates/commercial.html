@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block title %}ОДПО{% endblock %}
+
+{% block pc_nav %}
+  {% for id, name in [('about', 'ОДПО'),
+                      ('docs', 'Документы')] %}
+    {% if loop.index == 1 %}
+      <li class="nav-item active">
+        <a href="#{{ id }}">{{ name }}</a>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a href="#{{ id }}">{{ name }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block mob_nav %}
+  {% for id, icon in [('about', 'help'),
+                      ('docs', 'class')] %}
+    {% if loop.index == 1 %}
+      <li class="nav-item active">
+        <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+  <div class="anchor" id="about"></div>
+  <article>
+    <h3>Отделение дополнительного платного образования</h3>
+    <div class="divider"></div>
+    <p>Отделение дополнительного платного образования (ОДПО) работает в составе СУНЦ с 1996 года. До 2015 года оно называлось «Отделение с возмещением затрат на обучение» (ОВЗО).</p>
+    <p>Основная задача ОДПО — создать условия для обучения в СУНЦ тем ребятам, кто не прошел по конкурсу на бюджетные места, а также тем учащимся и их родителям, которые рассчитывают на индивидуальный подход в обучении.</p>
+    <p>Для решения этой задачи в ОДПО создан и хорошо зарекомендовал себя с самого начала работы институт освобожденных классных руководителей.</p>
+    <p>
+      Работа педагогического коллектива ОДПО — это:
+      <ul>
+        <li>организация комфортного микроклимата в классе, который создается на 2–3 года;</li>
+        <li>профессиональная помощь в адаптации ребенка к новым для него условиям и требованиям;</li>
+        <li>своевременное выявление и устранение межличностных конфликтов;</li>
+        <li>постоянный и эффективный контроль за успеваемостью и посещаемостью каждого ученика;</li>
+        <li>своевременная помощь ребенку в трудных ситуациях учебного и личностного характера.</li>
+      </ul>
+    </p>
+    <p>Профиль и программы каждого класса соответствуют профилю и программам бюджетных классов и реализуются теми же преподавателями.</p>
+    <p>Учащиеся ОДПО участвуют не только в общелицейских олимпиадах, но и выходят на региональный и российский уровни олимпиад и конференций; они также принимают активное участие во всех культурных мероприятиях СУНЦ.</p>
+    <p>Составной частью образовательной программы ОДПО является система специальных курсов (дополнительных занятий) по предметам, требующим углубленной подготовки для поступления в вузы.</p>
+    <p>Сплоченность ученического (9–11 классы) и мобильность педагогического коллективов позволяют не только решать перечисленные выше задачи, но также обеспечивать функционирование ОДПО в едином образовательном пространстве СУНЦ.</p>
+    <p>За время существования ОДПО с золотыми и серебряными медалями СУНЦ закончили 15 наших выпускников; около 85% выпускников ОДПО поступают на различные факультеты УрФУ.</p>
+    <p>Словом, приходите учиться в ОДПО СУНЦ — не пожалеете!</p>
+    <p>Наш телефон <b>365-44-66</b>, электронная почта <code>a.v.zvonareva@urfu.ru</code>.</p>
+  </article>
+
+  <div class="anchor" id="docs"></div>
+  <article>
+    <h3>Документы</h3>
+    <div class="divider"></div>
+    <div>
+      <div class="tile tile-centered tile-mini">
+        <div class="tile-icon">
+          <i class="icon icon-insert_drive_file centered"></i>
+        </div>
+        <div class="tile-content columns">
+          <div class="tile-title col-8 col-lg-12">
+            «От теории к практике».ОДПО
+          </div>
+          <div class="tile-subtitle col-4 hide-lg text-right">
+            14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017
+          </div>
+        </div>
+        <div class="tile-action">
+          <a class="btn btn-link" href="#"><i class="icon icon-get_app"></i></a>
+        </div>
+      </div>
+      <div class="tile tile-centered tile-mini">
+        <div class="tile-icon">
+          <i class="icon icon-insert_drive_file centered"></i>
+        </div>
+        <div class="tile-content columns">
+          <div class="tile-title col-8 col-lg-12">
+            Родительское собрание.Март.ОДПО
+          </div>
+          <div class="tile-subtitle col-4 hide-lg text-right">
+            14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017
+          </div>
+        </div>
+        <div class="tile-action">
+          <a class="btn btn-link" href="#"><i class="icon icon-get_app"></i></a>
+        </div>
+      </div>
+      <div class="tile tile-centered tile-mini">
+        <div class="tile-icon">
+          <i class="icon icon-insert_drive_file centered"></i>
+        </div>
+        <div class="tile-content columns">
+          <div class="tile-title col-8 col-lg-12">
+            «Это ТЕБЕ…».ОДПО
+          </div>
+          <div class="tile-subtitle col-4 hide-lg text-right">
+            14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017
+          </div>
+        </div>
+        <div class="tile-action">
+          <a class="btn btn-link" href="#"><i class="icon icon-get_app"></i></a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="tile tile-centered tile-mini">
+        <div class="tile-icon">
+          <i class="icon icon-insert_drive_file centered"></i>
+        </div>
+        <div class="tile-content columns">
+          <div class="tile-title col-8 col-lg-12">
+            «ЧЕСТЬ ИМЕЮ!».ОДПО
+          </div>
+          <div class="tile-subtitle col-4 hide-lg text-right">
+            14 МБ <b>·</b> PDF-файл <b>·</b> 01 янв 2017
+          </div>
+        </div>
+        <div class="tile-action">
+          <a class="btn btn-link" href="#"><i class="icon icon-get_app"></i></a>
+        </div>
+      </div>
+    </div>
+  </article>
+{% endblock %}
+
+{% block js %}
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+{% endblock %}

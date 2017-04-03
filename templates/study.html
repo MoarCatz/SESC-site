@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+{% block title %}Учёба{% endblock %}
+{% block css %}<link href="{{ url_for('static', filename='css/study.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
+
+{% block pc_nav %}
+  {% for id, name in [('timetable', 'Расписание занятий'),
+                      ('rings', 'Расписание звонков'),
+                      ('calendar', 'Годовой учебный график'),
+                      ('ege', 'Результаты ЕГЭ')] %}
+    {% if loop.index == 1 %}
+      <li class="nav-item active">
+        <a href="#{{ id }}">{{ name }}</a>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a href="#{{ id }}">{{ name }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block mob_nav %}
+  {% for id, icon in [('timetable', 'date_range'),
+                      ('rings', 'alarm'),
+                      ('calendar', 'today'),
+                      ('ege', 'equalizer')] %}
+    {% if loop.index == 1 %}
+      <li class="nav-item active">
+        <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
+      </li>
+    {% else %}
+      <li class="nav-item">
+        <a href="#{{ id }}"><i class="icon icon-{{ icon }}"></i></a>
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+  <div class="anchor" id="timetable"></div>
+  <article>
+    <h3>Расписание занятий</h3>
+    <div>
+      <span class="btn-group">
+        <a href="#timetable" class="btn">8А</a>
+      </span><!--
+      --><span class="btn-group">
+        <a href="#timetable" class="btn">9А</a>
+        <a href="#timetable" class="btn">9Б</a>
+        <a href="#timetable" class="btn">9В</a>
+        <a href="#timetable" class="btn">9Е</a>
+      </span><!--
+      --><span class="btn-group">
+        <a href="#timetable" class="btn">10А</a>
+        <a href="#timetable" class="btn">10Б</a>
+        <a href="#timetable" class="btn">10В</a>
+        <a href="#timetable" class="btn">10Г</a>
+        <a href="#timetable" class="btn">10Д</a>
+        <a href="#timetable" class="btn">10Е</a>
+        <a href="#timetable" class="btn">10З</a>
+        <a href="#timetable" class="btn">10К</a>
+      </span><!--
+      --><span class="btn-group">
+        <a href="#timetable" class="btn">11А</a>
+        <a href="#timetable" class="btn">11Б</a>
+        <a href="#timetable" class="btn">11В</a>
+        <a href="#timetable" class="btn">11Г</a>
+        <a href="#timetable" class="btn">11Д</a>
+        <a href="#timetable" class="btn">11Е</a>
+        <a href="#timetable" class="btn">11З</a>
+        <a href="#timetable" class="btn">11К</a>
+      </span>
+    </div>
+    <div class="mt-10">
+      <span class="btn-group">
+        <a href="#timetable" class="btn">8Л</a>
+      </span><!--
+      --><span class="btn-group">
+        <a href="#timetable" class="btn">8С</a>
+      </span><!--
+      --><span class="btn-group">
+        <a href="#timetable" class="btn">9Л</a>
+        <a href="#timetable" class="btn">9С</a>
+      </span><!--
+      --><span class="btn-group">
+        <a href="#timetable" class="btn">10Л</a>
+        <a href="#timetable" class="btn">10М</a>
+        <a href="#timetable" class="btn">10С</a>
+      </span><!--
+    --><span class="btn-group">
+        <a href="#timetable" class="btn">11Л</a>
+        <a href="#timetable" class="btn">11М</a>
+        <a href="#timetable" class="btn">11С</a>
+      </span>
+    </div>
+  </article>
+
+  <div class="anchor" id="rings"></div>
+  <article>
+    <h3>Расписание звонков</h3>
+    <div class="divider"></div>
+    <div class="columns m0">
+      <div class="col-4 col-md-8 col-sm-12 centered">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Начало</th>
+              <th>Окончание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 урок</td>
+              <td>9:00</td>
+              <td>9:40</td>
+            </tr>
+            <tr>
+              <td>2 урок</td>
+              <td>9:50</td>
+              <td>10:30</td>
+            </tr>
+            <tr>
+              <td>3 урок</td>
+              <td>10:45</td>
+              <td>11:25</td>
+            </tr>
+            <tr>
+              <td>4 урок</td>
+              <td>11:40</td>
+              <td>12:20</td>
+            </tr>
+            <tr>
+              <td>5 урок</td>
+              <td>12:35</td>
+              <td>13:15</td>
+            </tr>
+            <tr>
+              <td>6 урок</td>
+              <td>13:35</td>
+              <td>14:15</td>
+            </tr>
+            <tr>
+              <td>7 урок</td>
+              <td>14:35</td>
+              <td>15:15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+
+  <div class="anchor" id="calendar"></div>
+  <article>
+    <h3>Годовой календарный график</h3>
+    <div class="divider"></div>
+    <figure class="figure">
+      <img src="{{ url_for('static', filename='img/calgraf.png') }}" class="img-responsive" alt="Календарный учебный график" />
+    </figure>
+
+    <div class="columns">
+      <div class="col-7 col-md-12">
+        <div class="tile tile-centered">
+          <div class="tile-icon">
+            <i class="icon icon-insert_drive_file centered"></i>
+          </div>
+          <div class="tile-content">
+            <div class="tile-title">Годовой календарный учебный график на 2016/17 учебный год</div>
+            <div class="tile-subtitle">14 МБ <b>·</b> ODT-файл <b>·</b> 01 янв 2017</div>
+          </div>
+          <div class="tile-action">
+            <a href="#" class="btn btn-link">
+              <i class="icon icon-get_app"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="anchor" id="ege"></div>
+  <article>
+    <h3>Результаты ЕГЭ</h3>
+    <div class="divider"></div>
+    <div class="columns">
+      <div class="col-7 col-md-12">
+        <div class="tile tile-centered">
+          <div class="tile-icon">
+            <i class="icon icon-crop_original centered centered"></i>
+          </div>
+          <div class="tile-content">
+            <div class="tile-title">2012/13 учебный год</div>
+            <div class="tile-subtitle">14 МБ <b>·</b> JPG-файл <b>·</b> 01 янв 2017</div>
+          </div>
+          <div class="tile-action">
+            <a href="#" class="btn btn-link">
+              <i class="icon icon-get_app"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="col-7 col-md-12">
+        <div class="tile tile-centered">
+          <div class="tile-icon">
+            <i class="icon icon-crop_original centered centered"></i>
+          </div>
+          <div class="tile-content">
+            <div class="tile-title">2013/14 учебный год</div>
+            <div class="tile-subtitle">14 МБ <b>·</b> JPG-файл <b>·</b> 01 янв 2017</div>
+          </div>
+          <div class="tile-action">
+            <a href="#" class="btn btn-link">
+              <i class="icon icon-get_app"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="col-7 col-md-12">
+        <div class="tile tile-centered">
+          <div class="tile-icon">
+            <i class="icon icon-crop_original centered centered"></i>
+          </div>
+          <div class="tile-content">
+            <div class="tile-title">2014/15 учебный год</div>
+            <div class="tile-subtitle">14 МБ <b>·</b> JPG-файл <b>·</b> 01 янв 2017</div>
+          </div>
+          <div class="tile-action">
+            <a href="#" class="btn btn-link">
+              <i class="icon icon-get_app"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+{% endblock %}
+
+{% block js %}
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+{% endblock %}
