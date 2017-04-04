@@ -9,3 +9,11 @@ $(window).scroll(function() {
   $('.nav .nav-item').removeClass('active');
 	$('a[href="#' + $(top[top.length - 1]).attr('id') + '"]').parent().addClass('active');
 });
+
+
+// Выпадающие меню
+$('.dropdown-toggle').click(function() {
+  $(this).parents('.dropdown').toggleClass('active');
+}).focusout(function() {
+  $(this).parents('.dropdown').removeClass('active');
+});

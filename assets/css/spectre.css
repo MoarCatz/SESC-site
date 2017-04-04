@@ -1980,7 +1980,6 @@ code {
   right: 0;
 }
 .dropdown.active .menu,
-.dropdown .dropdown-toggle:focus + .menu,
 .dropdown .menu:hover {
   display: block;
 }
@@ -2258,7 +2257,7 @@ code {
   -ms-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
   transition: transform .2s ease;
-  width: 32rem;
+  width: 22rem;
   z-index: 400;
 }
 .popover :focus + .popover-container,
