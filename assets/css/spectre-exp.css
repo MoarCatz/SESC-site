@@ -7,10 +7,12 @@
   text-align: center;
 }
 .calendar .calendar-nav {
-  align-items: center;
+  -webkit-align-items: center;
+          align-items: center;
   background: #f8f9fa;
   border-top-left-radius: .2rem;
   border-top-right-radius: .2rem;
+  display: -webkit-flex;
   display: flex;
   display: -ms-flexbox;
   -ms-flex-align: center;
@@ -19,18 +21,22 @@
 }
 .calendar .calendar-header,
 .calendar .calendar-body {
+  display: -webkit-flex;
   display: flex;
   display: -ms-flexbox;
   -ms-flex-pack: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+          justify-content: center;
   padding: 1rem 0;
 }
 .calendar .calendar-header .calendar-date,
 .calendar .calendar-body .calendar-date {
   -ms-flex: 0 0 14.28%;
-  flex: 0 0 14.28%;
+  -webkit-flex: 0 0 14.28%;
+          flex: 0 0 14.28%;
   width: 14.28%;
 }
 .calendar .calendar-header {
@@ -40,7 +46,8 @@
   font-size: 1.2rem;
 }
 .calendar .calendar-body {
-  align-items: center;
+  -webkit-align-items: center;
+          align-items: center;
   color: #727e96;
   -ms-flex-align: center;
 }
@@ -83,7 +90,8 @@
   right: .3rem;
   top: .3rem;
   -ms-transform: translate(50%, -50%);
-  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
 }
 .calendar .calendar-date.disabled .date-item,
 .calendar .calendar-date.disabled .calendar-event,
@@ -105,7 +113,8 @@
   right: 0;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .calendar .calendar-range.range-start::before {
   left: 50%;
@@ -122,10 +131,12 @@
 .calendar.calendar-lg .calendar-body .calendar-date {
   border-bottom: .1rem solid #f0f1f4;
   border-right: .1rem solid #f0f1f4;
+  display: -webkit-flex;
   display: flex;
   display: -ms-flexbox;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   height: 11rem;
   padding: 0;
 }
@@ -136,7 +147,8 @@
   border-bottom: 0;
 }
 .calendar.calendar-lg .date-item {
-  align-self: flex-end;
+  -webkit-align-self: flex-end;
+          align-self: flex-end;
   -ms-flex-item-align: end;
   height: 2.8rem;
   margin-right: .5rem;
@@ -153,7 +165,8 @@
   right: 1.9rem;
 }
 .calendar.calendar-lg .calendar-events {
-  flex-grow: 1;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
   -ms-flex-positive: 1;
   line-height: 1;
   overflow-y: auto;
@@ -187,7 +200,8 @@
   position: relative;
 }
 .carousel .carousel-container .carousel-item {
-  animation: carousel-slideout 1s ease-in-out 1;
+  -webkit-animation: carousel-slideout 1s ease-in-out 1;
+          animation: carousel-slideout 1s ease-in-out 1;
   height: 100%;
   left: 0;
   margin: 0;
@@ -209,7 +223,8 @@
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   transition: all .4s ease;
   z-index: 200;
 }
@@ -223,7 +238,8 @@
 .carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-container .carousel-item:nth-of-type(2),
 .carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-container .carousel-item:nth-of-type(3),
 .carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-container .carousel-item:nth-of-type(4) {
-  animation: carousel-slidein .75s ease-in 1;
+  -webkit-animation: carousel-slidein .75s ease-in 1;
+          animation: carousel-slidein .75s ease-in 1;
   opacity: 1;
   z-index: 100;
 }
@@ -236,13 +252,16 @@
 .carousel .carousel-nav {
   bottom: 1rem;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   left: 50%;
   position: absolute;
   -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 20rem;
   z-index: 200;
 }
@@ -250,7 +269,8 @@
   color: rgba(231, 233, 237, .5);
   display: block;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+          flex: 1 0 auto;
   height: 4rem;
   margin: .4rem;
   max-width: 5rem;
@@ -272,22 +292,48 @@
     width: 100%;
   }
 }
-@keyframes carousel-slidein {
+@-webkit-keyframes carousel-slidein {
   0% {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes carousel-slidein {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes carousel-slideout {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 @keyframes carousel-slideout {
   0% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     opacity: 1;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 .meter {
@@ -346,8 +392,10 @@
 .parallax .parallax-content {
   box-shadow: 0 2rem 4.2rem rgba(69, 77, 93, .3);
   height: auto;
-  transform: perspective(100rem);
-  transform-style: preserve-3d;
+  -webkit-transform: perspective(100rem);
+          transform: perspective(100rem);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   transition: all .4s ease;
   width: 100%;
 }
@@ -361,20 +409,24 @@
   width: 100%;
 }
 .parallax .parallax-front {
-  align-items: center;
+  -webkit-align-items: center;
+          align-items: center;
   color: #fff;
+  display: -webkit-flex;
   display: flex;
   display: -ms-flexbox;
   -ms-flex-align: center;
   -ms-flex-pack: center;
   height: 100%;
-  justify-content: center;
+  -webkit-justify-content: center;
+          justify-content: center;
   left: 0;
   position: absolute;
   text-align: center;
   text-shadow: 0 0 3rem rgba(69, 77, 93, .95);
   top: 0;
-  transform: translateZ(10rem);
+  -webkit-transform: translateZ(10rem);
+          transform: translateZ(10rem);
   transition: all .4s ease;
   width: 100%;
   z-index: 1;
@@ -388,13 +440,15 @@
   z-index: 300;
 }
 .parallax .parallax-top-left:hover ~ .parallax-content {
-  transform: perspective(100rem) rotateX(-3deg) rotateY(3deg);
+  -webkit-transform: perspective(100rem) rotateX(-3deg) rotateY(3deg);
+          transform: perspective(100rem) rotateX(-3deg) rotateY(3deg);
 }
 .parallax .parallax-top-left:hover ~ .parallax-content::before {
   background: linear-gradient(135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-top-left:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(-.65rem, -.65rem, 10rem);
+  -webkit-transform: translate3d(-.65rem, -.65rem, 10rem);
+          transform: translate3d(-.65rem, -.65rem, 10rem);
 }
 .parallax .parallax-top-right {
   height: 50%;
@@ -405,13 +459,15 @@
   z-index: 300;
 }
 .parallax .parallax-top-right:hover ~ .parallax-content {
-  transform: perspective(100rem) rotateX(-3deg) rotateY(-3deg);
+  -webkit-transform: perspective(100rem) rotateX(-3deg) rotateY(-3deg);
+          transform: perspective(100rem) rotateX(-3deg) rotateY(-3deg);
 }
 .parallax .parallax-top-right:hover ~ .parallax-content::before {
   background: linear-gradient(-135deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-top-right:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(.65rem, -.65rem, 10rem);
+  -webkit-transform: translate3d(.65rem, -.65rem, 10rem);
+          transform: translate3d(.65rem, -.65rem, 10rem);
 }
 .parallax .parallax-bottom-left {
   bottom: 0;
@@ -422,13 +478,15 @@
   z-index: 300;
 }
 .parallax .parallax-bottom-left:hover ~ .parallax-content {
-  transform: perspective(100rem) rotateX(3deg) rotateY(3deg);
+  -webkit-transform: perspective(100rem) rotateX(3deg) rotateY(3deg);
+          transform: perspective(100rem) rotateX(3deg) rotateY(3deg);
 }
 .parallax .parallax-bottom-left:hover ~ .parallax-content::before {
   background: linear-gradient(45deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-bottom-left:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(-.65rem, .65rem, 10rem);
+  -webkit-transform: translate3d(-.65rem, .65rem, 10rem);
+          transform: translate3d(-.65rem, .65rem, 10rem);
 }
 .parallax .parallax-bottom-right {
   bottom: 0;
@@ -439,13 +497,15 @@
   z-index: 300;
 }
 .parallax .parallax-bottom-right:hover ~ .parallax-content {
-  transform: perspective(100rem) rotateX(3deg) rotateY(-3deg);
+  -webkit-transform: perspective(100rem) rotateX(3deg) rotateY(-3deg);
+          transform: perspective(100rem) rotateX(3deg) rotateY(-3deg);
 }
 .parallax .parallax-bottom-right:hover ~ .parallax-content::before {
   background: linear-gradient(-45deg, rgba(255, 255, 255, .25) 0%, rgba(255, 255, 255, 0) 50%);
 }
 .parallax .parallax-bottom-right:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(.65rem, .65rem, 10rem);
+  -webkit-transform: translate3d(.65rem, .65rem, 10rem);
+          transform: translate3d(.65rem, .65rem, 10rem);
 }
 .progress {
   -webkit-appearance: none;
@@ -472,11 +532,20 @@
   border-radius: .2rem;
 }
 .progress:indeterminate {
-  animation: progress-indeterminate 1.5s linear infinite;
+  -webkit-animation: progress-indeterminate 1.5s linear infinite;
+          animation: progress-indeterminate 1.5s linear infinite;
   background: #f0f1f4 linear-gradient(to right, #4caf50 30%, #f0f1f4 30%) top left / 150% 150% no-repeat;
 }
 .progress:indeterminate::-moz-progress-bar {
   background: transparent;
+}
+@-webkit-keyframes progress-indeterminate {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 @keyframes progress-indeterminate {
   0% {
@@ -502,7 +571,9 @@
   border-radius: 50%;
   height: 1.2rem;
   margin-top: -.5rem;
+  transition: -webkit-transform .2s ease;
   transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: 1.2rem;
 }
 .slider::-moz-range-thumb {
@@ -510,7 +581,9 @@
   border: 0;
   border-radius: 50%;
   height: 1.2rem;
+  transition: -webkit-transform .2s ease;
   transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: 1.2rem;
 }
 .slider::-ms-thumb {
@@ -518,11 +591,14 @@
   border: 0;
   border-radius: 50%;
   height: 1.2rem;
+  transition: -webkit-transform .2s ease;
   transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
   width: 1.2rem;
 }
 .slider:active::-webkit-slider-thumb {
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .slider:active::-moz-range-thumb {
   transform: scale(1.25);
@@ -534,7 +610,8 @@
 .slider:disabled::-webkit-slider-thumb,
 .slider.disabled::-webkit-slider-thumb {
   background: #e7e9ed;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .slider:disabled::-moz-range-thumb,
 .slider.disabled::-moz-range-thumb {

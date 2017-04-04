@@ -7,7 +7,9 @@ header {
 }
 
 .navbar-primary {
-  flex-grow: 2 !important;
+  -webkit-flex-grow: 2 !important;
+      -ms-flex-positive: 2 !important;
+          flex-grow: 2 !important;
 }
 
 .navbar-primary .hide-md blockquote {
@@ -107,12 +109,16 @@ dd {
 }
 
 .card-news {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .columns.additional-news {
   height: 100%;
-  align-content: space-between;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
 }
 
 .columns.additional-news .column.col-12 {

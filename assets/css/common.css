@@ -3,8 +3,12 @@ html {
 }
 
 body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
   min-height: 100%;
 }
@@ -12,7 +16,11 @@ body {
 main {
   padding: 20px;
 
-  flex: 1;
+  -webkit-flex: 1;
+
+      -ms-flex: 1;
+
+          flex: 1;
 }
 
 header {
@@ -26,7 +34,9 @@ header {
 }
 
 .nav-left {
-  flex: 2 !important;
+  -webkit-flex: 2 !important;
+      -ms-flex: 2 !important;
+          flex: 2 !important;
 }
 
 header .menu li {
@@ -35,6 +45,10 @@ header .menu li {
 
 a.btn-primary.show-md {
   padding: 5px 6px;
+}
+
+.show-md-flex {
+  display: none !important;
 }
 
 main {
@@ -57,13 +71,17 @@ main {
 
 @media only screen and (max-width: 600px) {
   .nav-left {
-    flex: 0 2 0 !important;
+    -webkit-flex: 0 2 0 !important;
+        -ms-flex: 0 2 0px !important;
+            flex: 0 2 0 !important;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .nav-left {
-    flex: 0 2 0 !important;
+    -webkit-flex: 0 2 0 !important;
+        -ms-flex: 0 2 0px !important;
+            flex: 0 2 0 !important;
   }
 
   #staff + article .label {
@@ -182,9 +200,8 @@ a.active {
   background: #3d8b40;
 
   font-size: 18pt;
-
   -webkit-align-content: space-around;
-  align-content: space-around;
+          align-content: space-around;
   -webkit-align-items: center;
   align-items: center;
   -ms-flex-align: center;

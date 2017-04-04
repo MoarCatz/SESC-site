@@ -7,7 +7,6 @@ main.maintext {
   border-left-width: 0;
 }
 
-/* ----- Calendar-like border ----- */
 main .navbar,
 thead {
   background: #f2f3f4;
@@ -19,9 +18,7 @@ thead {
 thead {
   border-top-width: 0;
 }
-/* -------------------------------- */
 
-/* ----- Header ----- */
 .navbar li {
   font-size: 10pt;
   margin: 0;
@@ -41,7 +38,6 @@ button.btn-lg {
       -ms-flex-align: center;
           align-items: center;
 }
-/* ------------------ */
 
 main .navbar {
   width: 100%;
@@ -138,7 +134,6 @@ td.tooltip:nth-child(n+2) {
   position: relative;
 }
 
-/* ----- Arrows for popovers ----- */
 td.popover .card::before {
   content: "";
   position: absolute;
@@ -232,7 +227,6 @@ td.topic-pvr.popover-left .card::after {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* ------------------------------- */
 
 table .card-header {
   padding: 8px !important;
@@ -253,10 +247,10 @@ table .card-header {
 }
 
 .table-scroller {
-  margin-left: 38px; /* size of the sticky column */
+  margin-left: 38px;
   overflow-x: scroll;
   padding-bottom: 10px;
-  width: calc(100% - 38px); /* size of the scrollable part */
+  width: calc(100% - 38px);
   z-index: 1;
 }
 
@@ -299,8 +293,8 @@ table .card-header {
 
 .navbar button.btn-sm {
   padding: 0;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
+  -ms-flex-line-pack: center;
+      -webkit-align-content: center;
           align-content: center;
 }
 
