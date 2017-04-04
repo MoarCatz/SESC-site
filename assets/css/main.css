@@ -2,9 +2,22 @@ header {
   background: #f6f6f6;
 }
 
+.navbar section {
+  /*align-items: flex-start !important;*/
+}
+
+.navbar-primary {
+  flex-grow: 2 !important;
+}
+
+.navbar-primary .hide-md blockquote {
+  width: 100%;
+}
+
 blockquote {
   border-color: rgba(23, 89, 29, 0.7);
   background: rgba(23, 91, 27, 0.1);
+  background: rgba(23, 91, 27, 0.03);
 }
 
 .card {
@@ -81,4 +94,35 @@ footer {
   border: 0 solid #4CAF50;
   border-top-width: 3px;
   background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+footer .nav .nav-item a {
+  color: #fff;
+  padding: 0;
+}
+
+dd {
+  margin: 0rem 0 0.1rem 0 !important;
+}
+
+.card-news {
+  display: flex;
+}
+
+.columns.additional-news {
+  height: 100%;
+  align-content: space-between;
+}
+
+.columns.additional-news .column.col-12 {
+  padding: 0;
+}
+
+.card-news .column {
+  padding: 0;
+}
+
+.card .card-subtitle {
+  opacity: 1;
 }
