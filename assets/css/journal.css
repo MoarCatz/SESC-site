@@ -15,6 +15,10 @@ thead {
   border-top-right-radius: 2px;
 }
 
+table {
+  cursor: default;
+}
+
 thead {
   border-top-width: 0;
 }
@@ -60,11 +64,11 @@ td.popover {
 }
 
 .table th {
-  font-size: 8pt;
   border: 0 solid #ccc;
-  font-weight: normal;
-  color: #aaa;
   padding: 4px 3px;
+  font-weight: normal;
+  font-size: 8pt;
+  color: #aaa;
 }
 
 .table td {
@@ -76,13 +80,6 @@ td.popover {
   .table th {
     padding: 4px 5px;
   }
-
-  button.tooltip:focus::after,
-  button.tooltip:hover::after {
-    -ms-transform: translate(-70%, -.5rem);
-    -webkit-transform: translate(-70%, -.5rem);
-            transform: translate(-70%, -.5rem);
-  }
 }
 
 @media only screen and (min-width: 795px) {
@@ -92,6 +89,10 @@ td.popover {
 
   .table th {
     padding: 4px 4px;
+  }
+
+  table.table th p {
+    font-size: 10pt;
   }
 }
 
@@ -232,7 +233,6 @@ table .card-header {
   padding: 8px !important;
 }
 
-
 .bad-mark {
   color: #e85600;
 }
@@ -303,7 +303,7 @@ td.tooltip::after {
 }
 
 td.topic-tlp::after {
-  white-space: pre-wrap;
+  white-space: pre-line;
   padding: 4px;
   text-align: center;
 }

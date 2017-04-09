@@ -28,17 +28,14 @@ $("td.topic-pvr:nth-last-child(-n+4)").addClass("popover-left");
 
 // Расчет средней оценки за месяц
 function getMark(str) {
-  var mark;
-  if (str.includes('-')) {
-    mark = parseInt(str.slice(0, -1), 10) - 0.5;
+  var marks = str.match(/([0-9][-+]?)/g);
+  if (str.match(/[ну]{1,2}/)) {
+    return [];
   }
-  else if (str.includes('+')) {
-    mark = parseInt(str.slice(0, -1), 10) + 0.5;
+  if (marks === null) {
+    return ['2'];
   }
-  else {
-    mark = (isNaN(str) ? 2 : parseInt(str, 10));
-  }
-  return mark;
+  return marks;
 }
 
 function setAverageMonth(element, avg) {
@@ -50,9 +47,11 @@ function setAverageMonth(element, avg) {
 $('table.hide-md tr').each(function() {
   var total = 0;
   var count = 0;
+  var markArray;
   $(this).find('.mark').each(function() {
-    total += getMark($(this).text());
-    count++;
+    markArray = getMark($(this).text());
+    total += markArray.reduce((a, b) => a + parseInt(b, 10), 0);
+    count += markArray.length;
   });
   if (count) {
     setAverageMonth($(this).find('.subject').next(), total / count);
