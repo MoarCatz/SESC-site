@@ -22,29 +22,30 @@ function clear(object) {
 function validate(field, regex) {
   if (typeof regex === 'string') {
     var condition = (field.val() !== regex);
-    console.log(condition, field.val(), regex);
-  } else {
+  }
+  else {
     var condition = field.val().match(regex);
   }
 
   if (!condition) {
     setDanger(field);
     return false;
-  } else {
+  }
+  else {
     setSuccess(field);
     return true;
   }
 }
 
 $('.form-input').focusout(function() {
-  validate($(this), '')
+  validate($(this), '');
 });
 $('#email').focusout(function() {
-  validate($(this), /[A-Za-z0-9._-]+@[a-z]+.[a-z]+/g)
+  validate($(this), /[A-Za-z0-9._-]+@[a-z]+.[a-z]+/g);
 });
 $('#topic').focusout(function() {
-  validate($(this), 'Выберите подходящее')
-})
+  validate($(this), 'Выберите подходящее');
+});
 
 $('#reset').click(function() {
   clear($('#name'));
@@ -63,7 +64,7 @@ $('#submit').click(function(event) {
     [$('#message'), '']
   ];
 
-  for (i = 0; i < inputs.length; i++) {
+  for (var i = 0; i < inputs.length; ++i) {
     if (!validate(inputs[i][0], inputs[i][1])) {
       event.preventDefault();
     }
