@@ -10,6 +10,8 @@ $(window).scroll(function() {
 	$('a[href="#' + $(top[top.length - 1]).attr('id') + '"]').parent().addClass('active');
 });
 
+$('li').removeClass('active');
+$('li:first-child').addClass('active');
 
 // Выпадающие меню
 $('.dropdown-toggle').click(function() {
