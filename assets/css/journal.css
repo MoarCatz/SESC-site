@@ -3,7 +3,7 @@ header {
 }
 
 main.maintext {
-  margin-left: 10px;
+  margin: 57px 30px 20px 30px;
   border-left-width: 0;
 }
 
@@ -17,6 +17,7 @@ thead {
 
 table {
   cursor: default;
+  font-family: 'Open Sans';
 }
 
 thead {
@@ -98,18 +99,19 @@ td.popover {
 
 @media only screen and (min-width: 900px) {
   .subject {
-    font-size: 10pt;
+    font-size: 9pt;
     padding: 3px 10px;
   }
 
   .table th {
-    font-size: 10pt;
+    font-size: 9pt;
     padding: 6px 4px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .table th {
+    font-size: 9pt;
     padding: 6px 6px;
   }
 }
@@ -117,6 +119,18 @@ td.popover {
 @media only screen and (min-width: 1200px) {
   .table th {
     padding: 6px 9px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main.maintext {
+    margin: 57px 60px 20px 60px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  main.maintext {
+    margin: 57px 100px 20px 100px;
   }
 }
 
@@ -254,11 +268,6 @@ table .card-header {
   z-index: 1;
 }
 
-.scroller-condensed {
-  margin-left: 38px;
-  width: calc(100% - 38px);
-}
-
 .table-wrapper td.subject-tlp,
 #sticky-header {
   left: 0;
@@ -277,7 +286,7 @@ table .card-header {
 #sticky-header {
   background: #f2f3f4;
   padding: 0;
-  height: 25px;
+  height: 33px;
   border: 0 solid #e6e6e6;
   border-right-width: 1px;
   background-clip: padding-box;

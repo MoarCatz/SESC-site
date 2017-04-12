@@ -1,7 +1,3 @@
-#calendar + article th {
-  padding: 8px;
-}
-
 #plan + article ul {
   list-style: none;
   margin: 0;
@@ -9,23 +5,4 @@
 
 #plan + article li {
   margin: 0;
-}
-
-@media only screen and (max-width: 480px) {
-  #plan + article button {
-    padding: 5px 0;
-    font-size: 10pt;
-  }
-}
-
-#plan + article h6 {
-  padding: 10px 0;
-}
-
-#timetable + article span {
-  margin-right: 16px;
-}
-
-#timetable + article a.btn {
-  margin-bottom: 5px;
 }

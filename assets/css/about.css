@@ -48,3 +48,25 @@ figure {
 #staff + article .tile {
   margin: 10px 5px;
 }
+
+.tile-content .flex {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.tile-content .flex p {
+  flex: 2 0 60%;
+}
+
+.tile-content .flex .label {
+  flex: 1 0 40%;
+  padding: 3px 5px;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .tile-content .flex {
+    flex-direction: row;
+    align-items: space-between;
+  }
+}

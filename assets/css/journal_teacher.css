@@ -116,3 +116,31 @@ th div.popover-left .card::after {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.modal-container .card-header {
+  display: flex;
+  align-items: center;
+}
+
+.modal-container .card-header h6 {
+  flex: 2;
+}
+
+.table-scroller {
+  margin-left: 98px;
+  overflow-x: scroll;
+  padding-bottom: 10px;
+  width: calc(100% - 98px);
+  z-index: 1;
+}
+
+.table-wrapper td.subject-tlp,
+#sticky-header {
+  left: 0;
+  position: absolute;
+  width: 100px;
+}
+
+.td-condensed {
+  width: 100px !important;
+}

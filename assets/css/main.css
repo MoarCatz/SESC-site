@@ -2,45 +2,47 @@ header {
   background: #f6f6f6;
 }
 
-.navbar section {
-  /*align-items: flex-start !important;*/
-}
-
 .navbar-primary {
-  -webkit-flex-grow: 2 !important;
-      -ms-flex-positive: 2 !important;
-          flex-grow: 2 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.navbar-primary .hide-md blockquote {
-  width: 100%;
+.navbar-section.hide-md {
+  flex-grow: 4;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.navbar-section.hide-md .flex {
+  justify-content: space-between;
 }
 
 blockquote {
   border-color: rgba(23, 89, 29, 0.7);
   background: rgba(23, 91, 27, 0.1);
   background: rgba(23, 91, 27, 0.03);
+  margin-right: 0;
 }
 
 .card {
   background: rgba(207, 216, 220, 0.25);
 }
 
-.card-header h4{
+.card-header h4 {
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .header-logo {
-  position: relative;
-  bottom: 5px;
-  left: 15px;
-
   width: 80%;
-  height: 80%;
 }
 
-.no-outline:focus {
-  box-shadow: none;
+a.show-xs .header-logo {
+  width: 20px;
+  margin: 0 15px;
 }
 
 .main-bar {
@@ -114,6 +116,26 @@ dd {
   display: flex;
 }
 
+.card.large-card {
+  background-image: url(https://picturepan2.github.io/spectre/img/osx-el-capitan-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card.large-card:hover {
+  opacity: 0.9;
+}
+
+.card.large-card .card-image {
+  opacity: 0;
+}
+
+.card.large-card h4 {
+  color: #fff;
+}
+
 .columns.additional-news {
   height: 100%;
   -webkit-align-content: space-between;
@@ -123,6 +145,30 @@ dd {
 
 .columns.additional-news .column.col-12 {
   padding: 0;
+}
+
+.columns.additional-news .column.col-12 .card {
+   text-decoration: none !important;
+ }
+
+ .columns.additional-news .column.col-12 .card:hover {
+  opacity: 0.9;
+}
+
+.columns.additional-news .column.col-12 .card .col-4 {
+  background-image: url(https://picturepan2.github.io/spectre/img/osx-yosemite.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-decoration: none;
+}
+
+.columns.additional-news .column.col-12 .card .col-4 img {
+  opacity: 0;
+}
+
+.columns.additional-news .column.col-12 .card-body {
+  color: #50596c;
 }
 
 .card-news .column {
