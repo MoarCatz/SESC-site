@@ -4,19 +4,21 @@ header {
 
 main.maintext {
   margin: 57px 30px 20px 30px;
+
   border-left-width: 0;
 }
 
 main .navbar,
 thead {
-  background: #f2f3f4;
   border: 1px solid rgb(240, 241, 244);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  background: #f2f3f4;
 }
 
 table {
   cursor: default;
+
   font-family: 'Open Sans';
 }
 
@@ -25,8 +27,9 @@ thead {
 }
 
 .navbar li {
-  font-size: 10pt;
   margin: 0;
+
+  font-size: 10pt;
 }
 
 .navbar .menu {
@@ -34,8 +37,9 @@ thead {
 }
 
 button.btn-lg {
-  font-size: 20pt !important;
   padding: 0 !important;
+
+  font-size: 20pt !important;
 }
 
 .navbar-primary {
@@ -46,6 +50,7 @@ button.btn-lg {
 
 main .navbar {
   width: 100%;
+
   border-bottom-width: 0;
 }
 
@@ -60,20 +65,25 @@ td.popover {
 
 .subject {
   padding: 0 5px;
-  font-size: 8pt;
+
   white-space: nowrap;
+
+  font-size: 8pt;
 }
 
 .table th {
-  border: 0 solid #ccc;
   padding: 4px 3px;
-  font-weight: normal;
-  font-size: 8pt;
+
   color: #aaa;
+  border: 0 solid #ccc;
+
+  font-size: 8pt;
+  font-weight: normal;
 }
 
 .table td {
   padding: 0;
+
   border: 1px solid #eee;
 }
 
@@ -99,20 +109,23 @@ td.popover {
 
 @media only screen and (min-width: 900px) {
   .subject {
-    font-size: 9pt;
     padding: 3px 10px;
+
+    font-size: 9pt;
   }
 
   .table th {
-    font-size: 9pt;
     padding: 6px 4px;
+
+    font-size: 9pt;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .table th {
-    font-size: 9pt;
     padding: 6px 6px;
+
+    font-size: 9pt;
   }
 }
 
@@ -145,102 +158,121 @@ td.tooltip:nth-child(n+2) {
 }
 
 .card {
-  border-radius: 10px;
   position: relative;
+
+  border-radius: 10px;
 }
 
 td.popover .card::before {
-  content: "";
   position: absolute;
   bottom: 0%;
   left: 50%;
-  height: 0;
+
   width: 0;
-  border: 8px solid transparent;
-  border-top-color: #fff;
+  height: 0;
   margin-bottom: -15px;
   margin-left: -10px;
+
+  content: "";
+
+  border: 8px solid transparent;
+  border-top-color: #fff;
 }
 
 td.popover .card::after {
-  content: "";
   position: absolute;
+  z-index: -1;
   bottom: 0%;
   left: 50%;
-  height: 10px;
+
   width: 10px;
-  background-color: #fff;
-  margin-left: -6px;
+  height: 10px;
   margin-bottom: -5px;
-  z-index: -1;
-  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
+  margin-left: -6px;
+
+  content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
+  background-color: #fff;
+  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
 }
 
 td.topic-pvr.popover-left .card::before {
-  content: "";
   position: absolute;
+  right: 0%;
   bottom: 50%;
   left: inherit;
-  right: 0%;
-  height: 0;
+
   width: 0;
-  border: 8px solid transparent;
-  border-left-color: #fff;
+  height: 0;
+  margin-right: -16px;
   margin-bottom: -8px;
   margin-left: inherit;
-  margin-right: -16px;
+
+  content: "";
+
+  border: 8px solid transparent;
+  border-left-color: #fff;
 }
 
 td.topic-pvr.popover-left .card::after {
-  content: "";
   position: absolute;
+  z-index: -1;
+  right: 0%;
   bottom: 50%;
   left: inherit;
-  right: 0%;
-  height: 10px;
+
   width: 10px;
-  background-color: #fff;
-  margin-left: inherit;
+  height: 10px;
   margin-right: -6px;
   margin-bottom: -5px;
-  z-index: -1;
-  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
+  margin-left: inherit;
+
+  content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
+  background-color: #fff;
+  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
 }
 
 .subject + div .card::before {
-  content: "";
   position: absolute;
   bottom: 50%;
   left: 0%;
-  height: 0;
+
   width: 0;
-  border: 8px solid transparent;
-  border-right-color: #fff;
+  height: 0;
   margin-bottom: -8px;
   margin-left: -16px;
+
+  content: "";
+
+  border: 8px solid transparent;
+  border-right-color: #fff;
 }
 
 .subject + div .card::after {
-  content: "";
   position: absolute;
+  z-index: -1;
   bottom: 50%;
   left: 0%;
-  height: 10px;
+
   width: 10px;
-  background-color: #fff;
-  margin-left: -6px;
+  height: 10px;
   margin-bottom: -5px;
-  z-index: -1;
-  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
+  margin-left: -6px;
+
+  content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
+  background-color: #fff;
+  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
 }
 
 table .card-header {
@@ -257,21 +289,25 @@ table .card-header {
 
 .table-wrapper {
   position: relative;
+
   width: 100%;
 }
 
 .table-scroller {
-  margin-left: 38px;
-  overflow-x: scroll;
-  padding-bottom: 10px;
-  width: calc(100% - 38px);
   z-index: 1;
+
+  overflow-x: scroll;
+
+  width: calc(100% - 38px);
+  margin-left: 38px;
+  padding-bottom: 10px;
 }
 
 .table-wrapper td.subject-tlp,
 #sticky-header {
-  left: 0;
   position: absolute;
+  left: 0;
+
   width: 40px;
 }
 
@@ -284,11 +320,12 @@ table .card-header {
 }
 
 #sticky-header {
-  background: #f2f3f4;
-  padding: 0;
   height: 33px;
+  padding: 0;
+
   border: 0 solid #e6e6e6;
   border-right-width: 1px;
+  background: #f2f3f4;
   background-clip: padding-box;
 }
 
@@ -302,6 +339,7 @@ table .card-header {
 
 .navbar button.btn-sm {
   padding: 0;
+
   -ms-flex-line-pack: center;
       -webkit-align-content: center;
           align-content: center;
@@ -312,9 +350,10 @@ td.tooltip::after {
 }
 
 td.topic-tlp::after {
-  white-space: pre-line;
   padding: 4px;
+
   text-align: center;
+  white-space: pre-line;
 }
 
 td.tooltip:hover {

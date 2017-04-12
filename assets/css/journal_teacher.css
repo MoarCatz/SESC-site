@@ -11,9 +11,10 @@ td:nth-child(n+2):hover {
 }
 
 .popover:hover:not(.active) .popover-container {
-      -ms-transform: translate(-50%, -50%) scale(0) !important;
   -webkit-transform: translate(-50%, -50%) scale(0) !important;
+      -ms-transform: translate(-50%, -50%) scale(0) !important;
           transform: translate(-50%, -50%) scale(0) !important;
+
   opacity: 0 !important;
 }
 
@@ -34,9 +35,11 @@ td:nth-child(n+2):hover {
 }
 
 .table th p {
-  font-size: 8pt;
-  color: #aaa;
   margin: 0;
+
+  color: #aaa;
+
+  font-size: 8pt;
 }
 
 table th div:hover p,
@@ -49,8 +52,9 @@ table th div.active p {
 }
 
 .set-topic .card-header {
-  font-size: 10.5pt;
   padding-bottom: 0 !important;
+
+  font-size: 10.5pt;
 }
 
 .set-topic .form-group {
@@ -58,67 +62,80 @@ table th div.active p {
 }
 
 th div.popover-bottom .card::before {
-  content: "";
   position: absolute;
   top: 0%;
   left: 50%;
-  height: 0;
+
   width: 0;
-  border: 8px solid transparent;
-  border-bottom-color: #fff;
+  height: 0;
   margin-top: -15px;
   margin-left: -10px;
+
+  content: "";
+
+  border: 8px solid transparent;
+  border-bottom-color: #fff;
 }
 
 th div.popover-bottom .card::after {
-  content: "";
   position: absolute;
+  z-index: -1;
   top: 0%;
   left: 50%;
-  height: 10px;
+
   width: 10px;
-  background-color: #fff;
-  margin-left: -6px;
+  height: 10px;
   margin-top: -5px;
-  z-index: -1;
-  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
+  margin-left: -6px;
+
+  content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
+  background-color: #fff;
+  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
 }
 
 th div.popover-left .card::before {
-  content: "";
   position: absolute;
-  bottom: 50%;
   right: 0%;
-  height: 0;
+  bottom: 50%;
+
   width: 0;
+  height: 0;
+  margin-right: -16px;
+  margin-bottom: -8px;
+
+  content: "";
+
   border: 8px solid transparent;
   border-left-color: #fff;
-  margin-bottom: -8px;
-  margin-right: -16px;
 }
 
 th div.popover-left .card::after {
-  content: "";
   position: absolute;
-  bottom: 50%;
+  z-index: -1;
   right: 0%;
-  height: 10px;
+  bottom: 50%;
+
   width: 10px;
-  background-color: #fff;
+  height: 10px;
   margin-right: -6px;
   margin-bottom: -5px;
-  z-index: -1;
-  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
+
+  content: "";
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
+  background-color: #fff;
+  box-shadow: 0px 0.4rem 1rem rgba(69, 77, 93, 0.3);
 }
 
 .modal-container .card-header {
   display: flex;
+
   align-items: center;
 }
 
@@ -127,17 +144,20 @@ th div.popover-left .card::after {
 }
 
 .table-scroller {
-  margin-left: 98px;
-  overflow-x: scroll;
-  padding-bottom: 10px;
-  width: calc(100% - 98px);
   z-index: 1;
+
+  overflow-x: scroll;
+
+  width: calc(100% - 98px);
+  margin-left: 98px;
+  padding-bottom: 10px;
 }
 
 .table-wrapper td.subject-tlp,
 #sticky-header {
-  left: 0;
   position: absolute;
+  left: 0;
+
   width: 100px;
 }
 

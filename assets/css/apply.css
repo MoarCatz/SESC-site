@@ -6,9 +6,10 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .modal-content {
@@ -27,8 +28,9 @@
 }
 
 #program + article ul {
-  list-style: none;
   margin: 0;
+
+  list-style: none;
 }
 
 #program + article li {
