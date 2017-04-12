@@ -3,7 +3,7 @@ $(window).scroll(function() {
   var $elems = $('.anchor');
 
   var top = $.grep($elems, function(item) {
-    return $(item).position().top <= winTop + 53;
+    return $(item).position().top <= winTop + 70;
   });
 
   $('.nav .nav-item').removeClass('active');

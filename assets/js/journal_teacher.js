@@ -101,7 +101,7 @@ $('th div.popover button').click(function(event) {
 });
 
 // Переключение между учениками по нажатию клавиши Tab
-$(document).keydown(function(event) {
+$('table.hide-md').keydown(function(event) {
   var code = event.keyCode || event.which;
   if (code === 9) {
     event.preventDefault();
@@ -120,17 +120,43 @@ $(document).keydown(function(event) {
   }
 });
 
-/*.click(function() {
+
+$('td.popover').click(function() {
   $(this).toggleClass('active');
   if (lastActive !== undefined && !lastActive.is($(this))) {
     lastActive.removeClass('active');
   }
   lastActive = $(this);
-  var card = $(this).find('.card');
-  // Получение имени ученика и даты, за которую будет выставлена оценка
-  var person = $(this).siblings('td:first').children('.subject').text();
-  var date = $('th:eq(' + $(this).index().toString(10) + ') p').text();
-  $(this).children('p').addClass('mark');
+  setUpHeader($(this));
+});
 
-  card.children('.card-header').text(person + '\n' + date + ' ' + monthMap[months.indexOf($('#month-switch').text().split(/\s+/g)[0])]);
-});*/
+$('.modal .modal-container').click(function(event) {
+  event.stopPropagation();
+});
+
+$('td.popover button').click(function(event) {
+  event.preventDefault();
+  $(this).parents('.popover-container').prev().text($(this).prev().val());
+  $(this).parents('.popover').removeClass('active');
+});
+
+$('th.modal-trigger').click(function() {
+  var modal = $(this).children('.modal');
+  modal.toggleClass('active');
+  if (lastActive !== undefined && !lastActive.is(modal)) {
+    lastActive.removeClass('active');
+  }
+  lastActive = modal;
+});
+
+// Закрыть окно
+$('th.modal-trigger .card-header button').click(function(event) {
+  event.preventDefault();
+  $(this).parents('.modal').removeClass('active');
+});
+
+// Установить тему урока и закрыть окно
+$('th.modal-trigger button').click(function(event) {
+  event.preventDefault();
+  $(this).parents('.modal').removeClass('active');
+});
