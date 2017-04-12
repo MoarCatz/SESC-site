@@ -3,7 +3,8 @@
 
 <head>
   <title>СУНЦ УрФУ | Официальный сайт</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
   <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
   <link href="assets/css/spectre.css" type="text/css" rel="stylesheet" />
@@ -16,41 +17,45 @@
     <section class="grid-header container grid-960 pt-10 pb-10">
       <nav class="navbar">
         <section class="navbar-primary">
-          <a class="no-outline" href="index.html">
+          <a class="no-outline hide-xs" href="index.html">
             <img class="img-responsive header-logo" id="logo" src="assets/img/logo.svg" alt="СУНЦ УрФУ">
           </a>
-          <div class="hide-md">
+          <a class="no-outline show-xs" href="index.html">
+            <img class="img-responsive header-logo" id="logo" src="assets/img/logo-no-text.png" alt="СУНЦ УрФУ">
+          </a>
+        </section>
+        <section class="navbar-section hide-md">
+          <div class="flex">
             <a href="about.html" class="btn btn-link">О нас</a><!--
             --><a href="study.html" class="btn btn-link">Учёба</a><!--
             --><a href="departments.html" class="btn btn-link">Кафедры</a><!--
             --><a href="commercial.html" class="btn btn-link">ОДПО</a><!--
             --><a href="contests.html" class="btn btn-link">Соревнования</a>
-
-            <blockquote>Вот как бывает</blockquote>
           </div>
+          <blockquote>Одно слово - это два слова</blockquote>
         </section>
         <section class="navbar-section">
           <div class="dropdown">
             <div class="btn-group">
-              <a href="apply.html" target="_blank" class="btn btn-primary">Как поступить?</a>
+              <a class="btn btn-primary" href="apply.html" target="_blank">Как поступить?</a>
               <a class="btn btn-primary show-md dropdown-toggle" tabindex="0">
                 <i class="icon icon-menu"></i>
               </a>
               <ul class="menu">
                 <li>
-                  <a href="about.html" class="btn btn-link">О нас</a>
+                  <a class="btn btn-link" href="about.html">О нас</a>
                 </li>
                 <li>
-                  <a href="study.html" class="btn btn-link">Учёба</a>
+                  <a class="btn btn-link" href="study.html">Учёба</a>
                 </li>
                 <li>
-                  <a href="departments.html" class="btn btn-link">Кафедры</a>
+                  <a class="btn btn-link" href="departments.html">Кафедры</a>
                 </li>
                 <li>
-                  <a href="commercial.html" class="btn btn-link">ОДПО</a>
+                  <a class="btn btn-link" href="commercial.html">ОДПО</a>
                 </li>
                 <li>
-                  <a href="contests.html" class="btn btn-link">Соревнования</a>
+                  <a class="btn btn-link" href="contests.html">Соревнования</a>
                 </li>
               </ul>
             </div>
@@ -66,81 +71,84 @@
         <div class="column col-12">
           <div class="columns">
             <div class="column col-lg-12">
-              <div class="card">
+              <a class="card large-card" href="#">
                 <div class="card-image">
                   <img src="https://picturepan2.github.io/spectre/img/osx-el-capitan-2.jpg" class="img-responsive" />
                 </div>
                 <div class="card-header">
-                  <button class="btn btn-primary float-right">Подробнее</button>
-                  <h4 class="card-title">СУНЦ переезжает</h4>
-                  <h6 class="card-subtitle">Вчера в 19:00</h6>
+                  <h4 class="card-title">Математика и не только</h4>
+                  <h6 class="card-subtitle">3 апреля в 16:00</h6>
                 </div>
                 <div class="card-body">
-                  Радостная новость &mdash; СУНЦ переезжает в горы к тибетским монахам.
+                  Как прошёл Открытый математический турнир
                 </div>
-              </div>
+              </a>
             </div>
+
             <div class="column col-lg-12">
               <div class="columns additional-news">
                 <div class="column col-12">
-                  <div class="card card-news columns col-gapless">
-                    <div class="column col-4">
+                  <a class="card card-news columns col-gapless" href="#">
+                    <div class="column col-4 hide-sm">
                       <div class="card-image">
                         <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
                       </div>
                     </div>
-                    <div class="column col-8">
+                    <div class="column col-8 col-sm-12">
                       <div class="card-header">
-                        <h4 class="card-title">Крысы атакуют!</h4>
-                        <h6 class="card-subtitle">1 марта</h6>
+                        <h4 class="card-title">Впереди — международный ТЮФ!</h4>
+                        <h6 class="card-subtitle">30 марта</h6>
                       </div>
                       <div class="card-body">
-                        Несчастные дети в панике от злых крыс. Спасите их!
+                        Как прошёл Турнир юных физиков
                       </div>
                     </div>
-                  </div>
+                  </a>
+
+                </div>
+
+
+
+                <div class="column col-12">
+                  <a class="card card-news columns col-gapless" href="#">
+                    <div class="column col-4 hide-sm">
+                      <div class="card-image">
+                        <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
+                      </div>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                      <div class="card-header">
+                        <h4 class="card-title">СУНЦ переходит к интегрированному обучению</h4>
+                        <h6 class="card-subtitle">1 апреля</h6>
+                      </div>
+                      <div class="card-body">
+                        О новшествах в обучении лицеистов
+                      </div>
+                    </div>
+                  </a>
 
                 </div>
 
                 <div class="column col-12">
-                  <div class="card card-news columns col-gapless">
-                    <div class="column col-4">
+                  <a class="card card-news columns col-gapless" href="#">
+                    <div class="column col-4 hide-sm">
                       <div class="card-image">
                         <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
                       </div>
                     </div>
-                    <div class="column col-8">
+                    <div class="column col-8 col-sm-12">
                       <div class="card-header">
-                        <h4 class="card-title">Крысы атакуют!</h4>
-                        <h6 class="card-subtitle">1 марта</h6>
+                        <h4 class="card-title">Впереди — международный ТЮФ!</h4>
+                        <h6 class="card-subtitle">30 марта</h6>
                       </div>
                       <div class="card-body">
-                        Несчастные дети в панике от злых крыс. Спасите их!
+                        Как прошёл Турнир юных физиков
                       </div>
                     </div>
-                  </div>
+                  </a>
 
                 </div>
 
-                <div class="column col-12">
-                  <div class="card card-news columns col-gapless">
-                    <div class="column col-4">
-                      <div class="card-image">
-                        <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
-                      </div>
-                    </div>
-                    <div class="column col-8">
-                      <div class="card-header">
-                        <h4 class="card-title">Крысы атакуют!</h4>
-                        <h6 class="card-subtitle">1 марта</h6>
-                      </div>
-                      <div class="card-body">
-                        Несчастные дети в панике от злых крыс. Спасите их!
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
               </div>
             </div>
           </div>
@@ -154,7 +162,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">
-                <i class="icon icon-people"></i> Поздравляем!
+                <i class="icon icon-cake"></i> Поздравляем!
               </h4>
             </div>
 
@@ -162,10 +170,6 @@
               <dl class="pl-5">
                 <dt>Ждун Васильевич</dt>
                 <dd>за самое спокойное лицо в мире</dd>
-              </dl>
-              <dl class="pl-5">
-                <dt>Гольдин</dt>
-                <dd>за несмешные шутки</dd>
               </dl>
 
             </div>
@@ -175,7 +179,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">
-                <i class="icon icon-apps"></i> А твоё мнение?
+                <i class="icon icon-poll"></i> А твоё мнение?
               </h4>
             </div>
 
@@ -219,7 +223,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">
-                <i class="icon icon-check"></i> Стихотворение недели
+                <i class="icon icon-library_books"></i> Стихотворение недели
               </h4>
             </div>
 
@@ -243,29 +247,29 @@
   <footer>
     <div class="container grid-footer grid-960">
       <div class="columns">
-        <div class="column col-4">
+        <div class="column col-xs-6">
           <h5>Контакты</h5>
           <ul class="nav">
             <li class="nav-item">
-              <a href="#">Написать нам</a>
+              <a href="contact.html">Написать нам</a>
             </li>
             <li class="nav-item">
-              <a href="#">Платежные реквизиты</a>
+              <a href="about.html#pay_details">Платёжные реквизиты</a>
             </li>
           </ul>
         </div>
-        <div class="column col-4">
+        <div class="column col-xs-6">
           <h5>Периодика</h5>
           <ul class="nav">
             <li class="nav-item">
-              <a href="#">Старый журнал</a>
+              <a href="#">Журнал "Авангард"</a>
             </li>
             <li class="nav-item">
-              <a href="#">Что-то новое</a>
+              <a href="#">Журнал "Архимед"</a>
             </li>
           </ul>
         </div>
-        <div class="column col-4">
+        <div class="column col-xs-12">
           <h5>Проекты</h5>
           <ul class="nav">
             <li class="nav-item">
@@ -278,6 +282,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
