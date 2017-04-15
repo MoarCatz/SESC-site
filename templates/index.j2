@@ -2,9 +2,10 @@
 <html lang="ru">
 
 <head>
-  <title>СУНЦ УрФУ | Официальный сайт</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <title>СУНЦ УрФУ - Главная</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon" />
   <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
   <link href="{{ url_for('static', filename='css/spectre.css') }}" type="text/css" rel="stylesheet" />
   <link href="{{ url_for('static', filename='css/main.css') }}" type="text/css" rel="stylesheet" />
@@ -12,391 +13,178 @@
 </head>
 
 <body>
-  <header class="navbar">
-    <!-- SESC Logo -->
-    <section class="navbar-primary" id="logo">
-      <a class="header-logo no-outline" href="#">
-        <img class="img-responsive" src="{{ url_for('static', filename='img/logo.svg') }}" alt="СУНЦ УрФУ">
-      </a>
-    </section>
-
-    <!-- Navigation buttons -->
-    <section class="navbar-section">
-      <div class="main-bar">
-        <div class="btn-group">
-          <a href="about.html" class="btn btn-link">
-            О нас
+  <header>
+    <section class="grid-header container grid-960 pt-10 pb-10">
+      <nav class="navbar">
+        <section class="navbar-primary">
+          <a class="no-outline hide-xs" href="index.html">
+            <img class="img-responsive header-logo" id="logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="СУНЦ УрФУ">
           </a>
-          <a href="study.html" class="btn btn-link">
-            Учёба
+          <a class="no-outline show-xs" href="index.html">
+            <img class="img-responsive header-logo" id="logo" src="{{ url_for('static', filename='img/logo-no-text.png') }}" alt="СУНЦ УрФУ">
           </a>
-          <a href="departments.html" class="btn btn-link">
-            Кафедры
-          </a>
-          <a href="commercial.html" class="btn btn-link">
-            ОДПО
-          </a>
-          <a href="contests.html" class="btn btn-link">
-            Соревнования
-          </a>
-        </div>
-        <blockquote>
-          <i>Если 1 кг повидла смешать с 1 кг грязи, получится 2 кг грязи</i><br />
-          <cite>Народная мудрость</cite>
-        </blockquote>
-      </div>
+        </section>
+        <section class="navbar-section hide-md">
+          <div class="flex">
+            {% for href, name in [('/about', 'О нас'), ('/study', 'Учёба'),
+                                  ('/departments', 'Кафедры'), ('/commercial', 'ОДПО'),
+                                  ('/contests', 'Соревнования')] %}
+              {% if loop.index == 1 %}
+                <a class="btn btn-link" href="{{ href }}">{{ name }}</a><!--
+              {% elif loop.index == 5 %}
+                --><a class="btn btn-link" href="{{ href }}">{{ name }}</a>
+              {% else %}
+                --><a class="btn btn-link" href="{{ href }}">{{ name }}</a><!--
+              {% endif %}
+            {% endfor %}
+          </div>
+          <blockquote>Одно слово - это два слова</blockquote>
+        </section>
+        <section class="navbar-section">
+          <div class="dropdown">
+            <div class="btn-group">
+              <a class="btn btn-primary" href="{{ url_for('apply') }}" target="_blank">Как поступить?</a>
+              <a class="btn btn-primary show-md dropdown-toggle" tabindex="0">
+                <i class="icon icon-menu"></i>
+              </a>
+              <ul class="menu">
+              {% for href, name in [('/about', 'О нас'), ('/study', 'Учёба'),
+                                    ('/departments', 'Кафедры'), ('/commercial', 'ОДПО'),
+                                    ('/contests', 'Соревнования')] %}
+                <li>
+                  <a class="btn btn-link" href="{{ href }}">{{ name }}</a>
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </section>
+      </nav>
     </section>
   </header>
   <main>
     <div class="container">
+
       <div class="columns">
-        <div class="column col-3">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">
-                <i class="icon icon-announcement"></i> Важно!
-              </h4>
-            </div>
-            <div class="card-body">
-              Начата регистрация на открытый математический турнир.<br />
-              <a class="no-outline" href="#">Подробнее</a>
-            </div>
-
-            <div class="card-body">
-              Учащимся и сотрудникам, имеющим проблемы с транспортным приложением (функция Е-карты на кампусной карте Сбербанка), необходимо не позднее 10 марта внести себя в список в приемной директора (комн. 112, помощник директора Елена Александровна).
-            </div>
-            <div class="card-footer">
-              <button class="btn btn-primary btn-sm">
-                Все объявления
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">
-                <i class="icon icon-rss_feed"></i> Не пропустите
-              </h4>
-            </div>
-            <div class="card-body">
-              Текущих анонсов нет.
-            </div>
-          </div>
-
-          <ul class="tab tab-block">
-            <li class="tab-item active">
-              <a href="#" id="link-projects">Проекты</a>
-            </li>
-            <li class="tab-item">
-              <a href="#" id="link-journal">Наша периодика</a>
-            </li>
-          </ul>
-          <section class='tab-section' id="tab-projects">
-            <a href="#" class="btn btn-link">
-                ДНТУ «ПОИСК»
-              </a>
-            <a href="#" class="btn btn-link">
-                Университетские школы
-              </a>
-            <a href="#" class="btn btn-link">
-              <img class="image-responsive" src="assets/img/sirius.png" />
-            </a>
-            <a href="#" class="btn btn-link">
-                Фоторепортажи об Уральской проектной смене ОЦ «Сириус»
-              </a>
-          </section>
-          <section class="tab-section" id="tab-journal">
-            <a href="#" class="btn btn-link">
-              Журнал «Авангард»
-            </a>
-            <a href="#" class="btn btn-link">
-              Журнал «Архимед»
-            </a>
-            <a href="#" class="btn btn-link">
-              Газета «Уральский университет»
-            </a>
-            <a href="#" class="btn btn-link">
-              Группа «Наука в лицах»
-            </a>
-          </section>
-        </div>
-        <div class="column col-6">
-          <article>
-            <div class="container">
-              <div class="columns">
-                <div class="column col-9">
-                  <h3>
-                    «Это Тебе...»
-                  </h3>
+        <div class="column col-12">
+          <div class="columns">
+            <div class="column col-lg-12">
+              <a class="card large-card" href="#">
+                <div class="card-image">
+                  <img src="https://picturepan2.github.io/spectre/img/osx-el-capitan-2.jpg" class="img-responsive" />
                 </div>
-                <div class="column col-3">
-                  <div class="text-right">
-                    <span class="label label-success">
-                      <time>09/03/2017</time>
-                    </span>
-                  </div>
+                <div class="card-header">
+                  <h4 class="card-title">Математика и не только</h4>
+                  <h6 class="card-subtitle">3 апреля в 16:00</h6>
                 </div>
-              </div>
+                <div class="card-body">
+                  Как прошёл Открытый математический турнир
+                </div>
+              </a>
             </div>
 
-            <img class="img-responsive rounded" src="{{ url_for('static', filename='img/000664.jpg') }}" alt="Фото новости" />
-
-            <p>
-              ОДПО отметило 8 Марта. Немного перефразируя слова одной известной песенки — «Из чего же, из чего же, из чего же cделаны СУНЦа девчонки? Из стремлений и сражений, из упорства и достижений сделаны СУНЦа девчонки!»
-            </p>
-
-            <p>
-              Девчонки СУНЦа... Все они такие разные, и каждая из них неповторима. Изящная и милая Лина Исламгалиева закружила нас в вальсе. Прекрасные представительницы от каждого класса блеснули смекалкой, знаниями и «женской» логикой в конкурсах.
-            </p>
-
-            <p>
-              Самые лестные комплименты для всех женщин в этот день прозвучали от ведущих и участников программы. Дмитрий Борисов заворожил нас звуками фортепиано, а танец от Яна Роменского зарядил невероятной энергией. Проникновенные стихи, которые читал Игорь Зубарев,
-              тронули душу. Сюрпризом для гостей оказалось выступление молодого коллектива «Шукстов и компания» (лидер группы, барабанщик — Евгений Устинов, бас-гитарист — Александр Шукстов, электрогитарист — Данил Миронов и солист — Денис Синицын). Ребята
-              исполнили песню «Do I wanna know?» группы «Arctic monkeys» — порыв души и нежность чувств, рок и любовь звучали со сцены.
-            </p>
-
-            <p>
-              И еще много теплых слов любви и благодарности было сказано для мам, учителей, девчонок! Нам бы хотелось, чтобы все мужчины учились любить, ценить, уважать Женщину, потому что она умеет ВСЁ! А также чтобы все мужчины могли чувствовать необыкновенную легкость
-              от простого общения с ней. С праздником, наши дорогие и милые!
-            </p>
-
-            <div class="columns">
-              <div class="col-2">
-                <div class="label">
-                  <a href="#">
-                    Фотогалерея
+            <div class="column col-lg-12">
+              <div class="columns additional-news">
+                <div class="column col-12">
+                  <a class="card card-news columns col-gapless" href="#">
+                    <div class="column col-4 hide-sm">
+                      <div class="card-image">
+                        <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
+                      </div>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                      <div class="card-header">
+                        <h4 class="card-title">Впереди — международный ТЮФ!</h4>
+                        <h6 class="card-subtitle">30 марта</h6>
+                      </div>
+                      <div class="card-body">
+                        Как прошёл Турнир юных физиков
+                      </div>
+                    </div>
                   </a>
+
                 </div>
-              </div>
-              <div class="col-8"></div>
-              <div class="col-2 text-right">
-                <small class="label">Лев Лапаев</small>
-              </div>
-            </div>
-          </article>
 
-          <div class="divider"></div>
 
-          <div class="tile">
-            <div class="tile-icon">
-              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000658.jpg') }}" alt="Фото новости" />
-            </div>
-            <div class="tile-content">
-              <p class="tile-title">
-                <a href="#">
-                  Уральская смена: хроника событий
-                </a>
-              </p>
-              <p class="post-desc">
-                С 1 по 24 февраля в образовательном центре «Сириус» (город Сочи) проходит Уральская образовательная смена, в которой принимают участие 52 учащихся нашего СУНЦ. Все дни насыщены интереснейшими событиями...
-              </p>
-            </div>
-            <div class="tile-action">
-              <span class="label">
-                <time>16/02/2017</time>
-              </span>
-            </div>
-          </div>
 
-          <div class="tile">
-            <div class="tile-icon">
-              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000657.jpg') }}" alt="Фото новости" />
-            </div>
-            <div class="tile-content">
-              <p class="tile-title">
-                <a href="#">
-                  Чертоги разума
-                </a>
-              </p>
-              <p class="post-desc">
-                8 февраля — День российской науки. Хотя этот день и не является выходным, его широко отмечают практически во всех научных коллективах. И мы решили у себя в ОДПО отметить этот праздник ...
-              </p>
-            </div>
-            <div class="tile-action">
-              <span class="label">
-                <time>10/02/2017</time>
-              </span>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile-icon">
-              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000656.jpg') }}" alt="Фото новости" />
-            </div>
-            <div class="tile-content">
-              <p class="tile-title">
-                <a href="#">
-                  «Акуна матата» (Всё будет хорошо!)
-                </a>
-              </p>
-              <p class="post-desc">
-                В этом году традиционно несколько классов ОДПО ездили в выходные на базу отдыха. В начале вечера нас ожидал захватывающий квест «Остановка по требованию». Это отличный способ расслабиться после...
-              </p>
-            </div>
-            <div class="tile-action">
-              <span class="label">
-                <time>07/02/2017</time>
-              </span>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile-icon">
-              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000655.jpg') }}" alt="Фото новости" />
-            </div>
-            <div class="tile-content">
-              <p class="tile-title">
-                <a href="#">
-                  «Сириус»: Уральская проектная смена открыта!
-                </a>
-              </p>
-              <p class="post-desc">
-                В образовательном центре «Сириус» (город Сочи) прошло торжественное открытие февральской смены. Среди участников — юные биологи, химики, конструкторы, информатики, астрономы, литераторы, музыканты, физики...
-              </p>
-            </div>
-            <div class="tile-action">
-              <span class="label">
-                <time>05/02/2017</time>
-              </span>
-            </div>
-          </div>
-
-          <div class="tile">
-            <div class="tile-icon">
-              <img class="image-responsive rounded" src="{{ url_for('static', filename='img/000654.jpg') }}" alt="Фото новости" />
-            </div>
-            <div class="tile-content">
-              <p class="tile-title">
-                <a href="#">
-                  Двери снова были открыты
-                </a>
-              </p>
-              <p class="post-desc">
-                29 января состоялась вторая консультативная встреча с абитуриентами и их родителями. На этот раз лицей принимал ребят, планирующих поступить в классы физико-математического, физико-технического...
-              </p>
-            </div>
-            <div class="tile-action">
-              <span class="label">
-                <time>30/01/2017</time>
-              </span>
-            </div>
-          </div>
-          <a href="#" class="btn btn-sm">
-            Все новости
-          </a>
-        </div>
-        <div class="column col-3">
-          <!--<div class="card">
-            <div class="card-header">
-              <h4 class="card-title">
-                <i class="icon icon-input">input</i>
-                Вход на сайт
-              </h4>
-            </div>
-
-            <div class="card-body">
-              <form>
-                <div class="form-group">
-                  <label class="form-label" for="login">
-                    Логин
-                  </label>
-                  <input class="form-input" type="text" id="login" placeholder="Логин" />
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="pswd">
-                    Пароль
-                  </label>
-                  <input class="form-input" type="password" id="pswd" placeholder="Пароль" />
-                </div>
-                <div class="form-group">
-                  <a class="btn btn-primary" type="submit">
-                    Вход
+                <div class="column col-12">
+                  <a class="card card-news columns col-gapless" href="#">
+                    <div class="column col-4 hide-sm">
+                      <div class="card-image">
+                        <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
+                      </div>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                      <div class="card-header">
+                        <h4 class="card-title">СУНЦ переходит к интегрированному обучению</h4>
+                        <h6 class="card-subtitle">1 апреля</h6>
+                      </div>
+                      <div class="card-body">
+                        О новшествах в обучении лицеистов
+                      </div>
+                    </div>
                   </a>
+
                 </div>
-              </form>
-            </div>
-          </div>-->
 
-          <ul class="menu mb-10">
-            <li class="menu-item">
-              <h6 class="pt-10"><b>Лев Челядинов</b></h6>
-            </li>
-            <li class="menu-header">
-              <span class="menu-header-text">
-                Быстрый доступ
-              </span>
-            </li>
-            <li class="menu-item">
-              <a href="#">
-                Расписание
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="#">
-                Электронный журнал
-              </a>
-            </li>
-            <div class="menu-badge">
-              <label class="label label-primary">1</label>
-            </div>
-            <li class="menu-item">
-              <a href="#">
-                Объявления
-              </a>
-            </li>
-            <li class="divider"></li>
-            <li class="menu-item">
-              <a href="#">
-                Настройки
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="#">
-                Выход
-              </a>
-            </li>
-          </ul>
+                <div class="column col-12">
+                  <a class="card card-news columns col-gapless" href="#">
+                    <div class="column col-4 hide-sm">
+                      <div class="card-image">
+                        <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive" />
+                      </div>
+                    </div>
+                    <div class="column col-8 col-sm-12">
+                      <div class="card-header">
+                        <h4 class="card-title">Лицеисты победили в олимпиаде по информатике</h4>
+                        <h6 class="card-subtitle">29 марта</h6>
+                      </div>
+                      <div class="card-body">
+                        Как прошла Вузовско-академическая олимпиада по информатике
+                      </div>
+                    </div>
+                  </a>
 
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">
-                <i class="icon icon-event"></i> Поздравляем!
-              </h4>
-            </div>
+                </div>
 
-            <div class="card-body">
-              <h6 class="mb-5">
-                С днём рождения вас,
-              </h6>
-              <div class="pl-5">
-                Евгения Викторовна Смирнова,<br /> Екатерина Церковникова,<br /> Александр Пронь,<br /> Анжелика Смолярчук,<br /> Кирилл Полтораднев,<br /> Артём Зарипов!
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
+      <li class="divider"></li>
+
+      <div class="columns">
+        <div class="column col-lg-12">
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">
-                <i class="icon icon-assessment"></i> А твоё мнение?
+                <i class="icon icon-cake"></i> Поздравляем!
               </h4>
             </div>
 
             <div class="card-body">
-              <h6 class="text-center mb-5">
-                Радует ли вас весна?
-              </h6>
+              <dl class="pl-5">
+                <dt>Ждун Васильевич</dt>
+                <dd>за самое спокойное лицо в мире</dd>
+              </dl>
 
-              <!--<div class="empty">
-                <h4 class="empty-title">
-                  Нет доступа
-                </h4>
-                <p class="empty-meta">
-                  Гости сайта не могут участвовать в опросе
-                </p>
-                <div class="empty-action">
-                  <a href="#" class="btn btn-primary">Результаты опросов</a>
-                </div>
-              </div>-->
+            </div>
+          </div>
+        </div>
+        <div class="column col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">
+                <i class="icon icon-poll"></i> А твоё мнение?
+              </h4>
+            </div>
+
+            <div class="card-body">
+              <h6 class="text-left mb-5">
+                Вам нравится Кафка?
+              </h6>
               <form>
                 <div class="form-group">
                   <label class="form-radio">
@@ -405,7 +193,7 @@
                   </label>
                   <label class="form-radio">
                     <input type="radio" name="gender" />
-                   	<i class="form-icon"></i> Нет: опять грязь, дожди, жара...
+                   	<i class="form-icon"></i> Нет: опять скука и бред
                   </label>
                   <label class="form-radio">
                     <input type="radio" name="gender" />
@@ -413,7 +201,7 @@
                   </label>
                   <label class="form-radio">
                     <input type="radio" name="gender" />
-                    <i class="form-icon"></i> Смена времён года не вызывает у меня эмоций
+                    <i class="form-icon"></i> Кафка не вызывает у меня эмоций
                   </label>
                 </div>
 
@@ -421,7 +209,7 @@
                   <a class="btn btn-primary btn-sm" type="submit">
                     Проголосовать
                   </a>
-                  <a href="#" class="btn btn-primary btn-sm">
+                  <a href="#" class="btn btn-sm">
                     Результаты
                   </a>
                 </div>
@@ -429,13 +217,72 @@
             </div>
           </div>
         </div>
+        <div class="column col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">
+                <i class="icon icon-library_books"></i> Стихотворение недели
+              </h4>
+            </div>
+
+            <div class="card-body">
+              <blockquote>
+                <p>
+                  Славься, великая Призма, <br>
+                  Славься во веки веков! <br>
+                  Святость Твою почитаем &mdash; <br>
+                  Ты наш единственный Богъ! <br>
+                </p>
+                <cite>- Гений</cite>
+              </blockquote>
+              <button class="btn">Читать полностью</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <footer>
-    <div class="pt-10 pb-10"></div>
-    <!-- Добавить раздел "Написать нам" -->
+    <div class="container grid-footer grid-960">
+      <div class="columns">
+        <div class="column col-xs-6">
+          <h5>Контакты</h5>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="/contact">Написать нам</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about#pay_details">Платёжные реквизиты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column col-xs-6">
+          <h5>Периодика</h5>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#">Журнал "Авангард"</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Журнал "Архимед"</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column col-xs-12">
+          <h5>Проекты</h5>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#">
+                <img src="{{ url_for('static', filename='img/sirius.png') }}"></img>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.j2" %}
 {% block title %}Кафедры{% endblock %}
 {% block css %}<link href="{{ url_for('static', filename='css/departments.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
 
@@ -69,7 +69,9 @@
         </div>
       </div>
     </div>
-    <h6>Программы учебных предметов и курсов</h6>
+    <div class="mt-10 mb-10">
+      <h6>Программы учебных предметов и курсов</h6>
+    </div>
     <ul>
       <li>
         <button class="btn btn-link">

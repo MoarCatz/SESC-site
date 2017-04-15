@@ -20,7 +20,7 @@
     <section class="grid-header container grid-960 pt-10 pb-10">
       <nav class="navbar">
         <section class="nav-left navbar-section">
-          <a class="no-outline" href="{{ url_for('index') }}"><img alt="СУНЦ УрФУ" class="img-responsive" id="logo" src="{{ url_for('static', filename='img/logo-no-text.png') }}"></a>
+          <a class="no-outline" href="/"><img alt="СУНЦ УрФУ" class="img-responsive" id="logo" src="{{ url_for('static', filename='img/logo-no-text.png') }}"></a>
           <div class="hide-md">
             {% for href, name in [('/about', 'О нас'), ('/study', 'Учёба'),
                                   ('/departments', 'Кафедры'), ('/commercial', 'ОДПО'),
@@ -40,13 +40,13 @@
             <div class="btn-group">
               <a class="btn btn-primary" href="/apply" target="_blank">Как поступить?</a> <a class="btn btn-primary show-md dropdown-toggle" tabindex="0"><i class="icon icon-menu"></i></a>
               <ul class="menu">
-              {% for href, name in [('about.html', 'О нас'), ('study.html', 'Учёба'),
-                                    ('departments.html', 'Кафедры'), ('commercial.html', 'ОДПО'),
-                                    ('contests.html', 'Соревнования')] %}
-                <li>
-                  <a class="btn btn-link" href="{{ href }}">{{ name }}</a>
-                </li>
-              {% endfor %}
+                {% for href, name in [('/about', 'О нас'), ('/study', 'Учёба'),
+                                      ('/departments', 'Кафедры'), ('/commercial', 'ОДПО'),
+                                      ('/contests', 'Соревнования')] %}
+                  <li>
+                    <a class="btn btn-link" href="{{ href }}">{{ name }}</a>
+                  </li>
+                {% endfor %}
               </ul>
             </div>
           </div>

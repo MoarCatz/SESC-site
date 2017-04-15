@@ -10,7 +10,7 @@ app.config['DEBUG_TEMPLATE'] = True
 
 @app.route('/')
 def index():
-    return render_template('base.j2')
+    return render_template('index.j2')
 
 @app.route('/about/')
 def about():
@@ -34,8 +34,19 @@ def contests():
 
 @app.route('/apply/')
 def apply():
-    pass
+    return render_template('apply.j2')
 
 @app.route('/contact/')
 def contact():
     return render_template('contact.j2')
+
+@app.route('/journal/')
+def journal():
+    return render_template('journal.j2')
+
+@app.route('/journal_teacher/')
+def journal_teacher():
+    return render_template('journal_teacher.j2')
+
+if __name__ == '__main__':
+    app.run(port=80)

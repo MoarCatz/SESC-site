@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.j2" %}
 {% block title %}Учёба{% endblock %}
 {% block css %}<link href="{{ url_for('static', filename='css/study.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
 
@@ -156,7 +156,7 @@
     <h3>Годовой календарный график</h3>
     <div class="divider"></div>
     <figure class="figure">
-      <img src="{{ url_for('static', filename='img/calgraf.png') }}" class="img-responsive" alt="Календарный учебный график" />
+      <img src="assets/img/calgraf.png" class="img-responsive" alt="Календарный учебный график" />
     </figure>
 
     <div class="columns">

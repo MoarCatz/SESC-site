@@ -3,16 +3,21 @@ html {
 }
 
 body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+          flex-direction: column;
 
   min-height: 100%;
+
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
 }
 
 main {
-  padding: 20px;
-
-  flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 header {
@@ -26,7 +31,9 @@ header {
 }
 
 .nav-left {
-  flex: 2 !important;
+  -webkit-flex: 0 2 0 !important;
+      -ms-flex: 0 2 0px !important;
+          flex: 0 2 0 !important;
 }
 
 header .menu li {
@@ -37,42 +44,24 @@ a.btn-primary.show-md {
   padding: 5px 6px;
 }
 
+.show-md-flex {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 main {
-  margin: 52px 10px 0 280px;
-}
-
-@media only screen and (max-width: 960px) {
-  main {
-    margin-left: 39px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .nav-left {
-    flex: 0 2 0 !important;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .nav-left {
-    flex: 0 2 0 !important;
-  }
-
-  #staff + article .label {
-    margin: 2px 5px;
-
-    text-align: center;
-  }
+  margin: 57px 10px 0 39px;
 }
 
 aside {
   position: fixed;
-  top: 57px;
-  left: 10px;
+  top: 5rem;
+  left: 0;
 }
 
 aside.hide-lg {
-  width: 280;
+  width: 280px;
 
   font-size: 10pt;
 }
@@ -94,6 +83,50 @@ aside i {
 
 aside .nav {
   margin: 0;
+}
+
+.nav li {
+  text-align: right;
+}
+
+@media only screen and (min-width: 600px) {
+  .nav-left {
+    -webkit-flex: 2 !important;
+        -ms-flex: 2 !important;
+            flex: 2 !important;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  .show-md-flex {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  main {
+    margin: 57px 70px 0 280px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    margin: 57px 140px 0 350px;
+  }
+
+  aside.hide-lg {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    margin: 57px 210px 0 420px;
+  }
+
+  aside.hide-lg {
+    width: 420px;
+  }
 }
 
 #logo {
@@ -176,7 +209,7 @@ a.active {
   font-size: 18pt;
 
   -webkit-align-content: space-around;
-  align-content: space-around;
+          align-content: space-around;
   -webkit-align-items: center;
   align-items: center;
   -ms-flex-align: center;

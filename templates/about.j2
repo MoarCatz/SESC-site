@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.j2" %}
 {% block title %}О нас{% endblock %}
 {% block css %}<link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet" type="text/css" />{% endblock %}
 
@@ -116,27 +116,27 @@
         <div class="columns m0">
           <div class="form-group col-6 col-xs-12">
             <label class="form-label" for="grad-year">Год выпуска</label> <select class="form-select" id="grad-year">
-							<option>Любой</option>
-							<option>2016</option>
-							<option>2015</option>
-							<option>2014</option>
-						</select>
+              <option>Любой</option>
+              <option>2016</option>
+              <option>2015</option>
+              <option>2014</option>
+            </select>
           </div>
           <div class="form-group col-6 col-xs-12">
             <label class="form-label" for="letter">Литер класса</label> <select class="form-select" id="letter">
-							<option>Любой</option>
-							<option>А</option>
-							<option>Б</option>
-							<option>В</option>
-							<option>Г</option>
-							<option>Д</option>
-							<option>Е</option>
-							<option>З</option>
-							<option>К</option>
-							<option>Л</option>
-							<option>С</option>
-							<option>М</option>
-						</select>
+              <option>Любой</option>
+              <option>А</option>
+              <option>Б</option>
+              <option>В</option>
+              <option>Г</option>
+              <option>Д</option>
+              <option>Е</option>
+              <option>З</option>
+              <option>К</option>
+              <option>Л</option>
+              <option>С</option>
+              <option>М</option>
+            </select>
           </div>
         </div>
         <div class="divider text-center" data-content="ИЛИ"></div>
@@ -191,31 +191,31 @@
     <p>Личное участие в создании СУНЦ приняли ректор УрГУ Паригорий Евстафьевич Суетин и первый проректор Рудольф Германович Пихоя, непосредственно занимавшийся всеми организационными вопросами. Первыми руководителями СУНЦ были Гермоген Иванович Аввакумов
       (директор школы-интерната № 19, на базе которой работал СУНЦ) и Михаил Аронович Вербук (занимавший должность декана СУНЦ). А осенью 1990 года проректором-директором СУНЦ стал Александр Иванович Кроткий.</p>
     <figure class="figure">
-      <img alt="П. Е. Суетин" class="img-responsive" src="{{ url_for('static', filename='img/suetin.jpg') }}">
+      <img alt="П. Е. Суетин" class="img-responsive" src="assets/img/suetin.jpg">
       <figcaption class="figure-caption text-center">
         П. Е. Суетин
       </figcaption>
     </figure>
     <figure class="figure">
-      <img alt="Р. Г. Пихоя" class="img-responsive" src="{{ url_for('static', filename='img/pihoya.jpg') }}">
+      <img alt="Р. Г. Пихоя" class="img-responsive" src="assets/img/pihoya.jpg">
       <figcaption class="figure-caption text-center">
         Р. Г. Пихоя
       </figcaption>
     </figure>
     <figure class="figure">
-      <img alt="Г. И. Аввакумов" class="img-responsive" src="{{ url_for('static', filename='img/avvakumov.jpg') }}">
+      <img alt="Г. И. Аввакумов" class="img-responsive" src="assets/img/avvakumov.jpg">
       <figcaption class="figure-caption text-center">
         Г. И. Аввакумов
       </figcaption>
     </figure>
     <figure class="figure">
-      <img alt="М. А. Вербук" class="img-responsive" src="{{ url_for('static', filename='img/verbuk.jpg') }}">
+      <img alt="М. А. Вербук" class="img-responsive" src="assets/img/verbuk.jpg">
       <figcaption class="figure-caption text-center">
         М. А. Вербук
       </figcaption>
     </figure>
     <figure class="figure">
-      <img alt="А. И. Кроткий" class="img-responsive" src="{{ url_for('static', filename='img/krotky.jpg') }}">
+      <img alt="А. И. Кроткий" class="img-responsive" src="assets/img/krotky.jpg">
       <figcaption class="figure-caption text-center">
         А. И. Кроткий
       </figcaption>
@@ -354,24 +354,28 @@
     <section class="show-md">
       <div class="tile">
         <div class="tile-content">
-          <div class="columns">
-            <p class="tile-title col-8 col-xs-12">Мартьянов Андрей Александрович</p>
-            <div class="label col-4 col-xs-12 text-right">
-              Администрация
-            </div>
+          <div class="flex">
+            <p class="tile-title">Мартьянов Андрей Александрович</p>
+            <span>
+              <div class="label text-centered">
+                Администрация
+              </div>
+            </span>
           </div>
-          <p class="tile-subtitle"><i>Директор</i><br> каб. 112, тел. 341-06-59 (местный 101)</p>
+          <p class="tile-subtitle"><i>Директор</i><br /> каб. 112, тел. 341-06-59 (местный 101)</p>
         </div>
       </div>
       <div class="tile">
         <div class="tile-content">
-          <div class="columns">
-            <p class="tile-title col-8 col-xs-12">Квакина Елена Александровна</p>
-            <div class="label col-4 col-xs-12 text-right">
-              Администрация
-            </div>
+          <div class="flex">
+            <p class="tile-title">Квакина Елена Александровна</p>
+            <span>
+              <div class="label text-centered">
+                Администрация
+              </div>
+            </span>
           </div>
-          <p class="tile-subtitle"><i>Помощник директора</i><br> каб. 112, тел. 341-06-59 (местный 102)</p>
+          <p class="tile-subtitle"><i>Помощник директора</i><br /> каб. 112, тел. 341-06-59 (местный 102)</p>
         </div>
       </div>
     </section>
