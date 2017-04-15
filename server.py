@@ -10,27 +10,27 @@ app.config['DEBUG_TEMPLATE'] = True
 
 @app.route('/')
 def index():
-    return render_template('base.html')
+    return render_template('base.j2')
 
 @app.route('/about/')
 def about():
-    return render_template('about.html')
+    return render_template('about.j2')
 
 @app.route('/study/')
 def study():
-    return render_template('study.html')
+    return render_template('study.j2')
 
 @app.route('/departments/')
 def departments():
-    return render_template('departments.html')
+    return render_template('departments.j2')
 
 @app.route('/commercial/')
 def commercial():
-    return render_template('commercial.html')
+    return render_template('commercial.j2')
 
 @app.route('/contests/')
 def contests():
-    return render_template('contests.html')
+    return render_template('contests.j2')
 
 @app.route('/apply/')
 def apply():
@@ -38,4 +38,4 @@ def apply():
 
 @app.route('/contact/')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.j2')
