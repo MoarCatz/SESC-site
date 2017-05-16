@@ -24,7 +24,7 @@ $('td.topic-tlp').hover(function() {
   }
 });
 
-$('td.topic-pvr:nth-last-child(-n+2)').addClass('popover-left');
+$('td.topic-pvr:nth-last-child(-n+3)').addClass('popover-left');
 
 // Переключение между классами
 function setDropText(drop, text) {
@@ -33,6 +33,7 @@ function setDropText(drop, text) {
 var classes = ['1Б', '2Б', '3Б', '4Б', '5Б', '6Б', '7Б', '8А', '9Е', '10Е'];
 var currIdx = classes.indexOf($('#class-switch').text().split(/\s+/g)[0]);
 
+// Логика переключения классов и месяцев
 $('#month-switch + ul a').click(function() {
   setDropText($('#month-switch'), $(this).text());
 });
@@ -50,7 +51,8 @@ $('#left').click(function() {
 });
 
 $('#right').click(function() {
-  setDropText($('#class-switch'), classes[++currIdx % classes.length]);
+  currIdx = (currIdx + 1) % classes.length;
+  setDropText($('#class-switch'), classes[currIdx]);
 });
 
 // Выставление оценок/тем
@@ -58,6 +60,7 @@ var months = ['Сентябрь', 'Октябрь', 'Ноябрь', 'Декаб�
 var monthMap = ['сентября', 'октября', 'ноября', 'декабря', 'января', 'февраля', 'марта', 'апреля', 'мая'];
 var lastActive;
 
+// Установить для данного элемента информацию об ученике в заголовке
 function setUpHeader(elem) {
   var card = elem.find('.card');
   // Получение имени ученика и даты, за которую будет выставлена оценка
@@ -68,8 +71,15 @@ function setUpHeader(elem) {
   card.children('.card-header').text(person + '\n' + date + ' ' + monthMap[months.indexOf($('#month-switch').text().split(/\s+/g)[0])]);
 }
 
+// Активация всплывающих окон
 $('td.popover').click(function() {
   $(this).toggleClass('active');
+  if ($(this).hasClass('active')) {
+    $('.table.hide-md td:nth-child(n+2):hover').css('border', 'inherit');
+  }
+  else {
+    $('.table.hide-md td:nth-child(n+2):hover').css('border', '2px solid #3d8b40');
+  }
   if (lastActive !== undefined && !lastActive.is($(this))) {
     lastActive.removeClass('active');
   }
@@ -77,16 +87,19 @@ $('td.popover').click(function() {
   setUpHeader($(this));
 });
 
+// Фикс для того, чтоб окно не закрывалось по нажатию на него
 $('.popover .popover-container').click(function(event) {
   event.stopPropagation();
 });
 
+// Выставление оценки и закрытие окна
 $('td.popover button').click(function(event) {
   event.preventDefault();
   $(this).parents('.popover-container').prev().text($(this).prev().val());
   $(this).parents('.popover').removeClass('active');
 });
 
+// Активация всплывающих окон в заголовке таблицы
 $('th div.popover').click(function() {
   $(this).toggleClass('active');
   if (lastActive !== undefined && !lastActive.is($(this))) {
@@ -95,6 +108,7 @@ $('th div.popover').click(function() {
   lastActive = $(this);
 });
 
+// Выставление темы и закрытие окна в заголовке таблицы
 $('th div.popover button').click(function(event) {
   event.preventDefault();
   $(this).parents('.popover').removeClass('active');
@@ -120,26 +134,31 @@ $('table.hide-md').keydown(function(event) {
   }
 });
 
-
-$('td.popover').click(function() {
-  $(this).toggleClass('active');
-  if (lastActive !== undefined && !lastActive.is($(this))) {
-    lastActive.removeClass('active');
-  }
-  lastActive = $(this);
-  setUpHeader($(this));
-});
-
+// Фикс для того, чтоб модальное окно не закрывалось при нажатии
 $('.modal .modal-container').click(function(event) {
   event.stopPropagation();
 });
 
-$('td.popover button').click(function(event) {
-  event.preventDefault();
-  $(this).parents('.popover-container').prev().text($(this).prev().val());
-  $(this).parents('.popover').removeClass('active');
-});
+// Установить дату, для которой будет выставляться оценка
+function setUpModal(elem) {
+  var modal = elem.children('.modal');
+  var date = elem.children('p').text();
 
+  modal.find('.card-subtitle').text(date + ' ' + monthMap[months.indexOf($('#month-switch').text().split(/\s+/g)[0])]);
+}
+
+// Установить в заголовке модального окна информацию об ученике
+function setUpModalMark(elem) {
+  var modal = elem.children('.modal');
+  // Получение имени ученика и даты, за которую будет выставлена оценка
+  var person = elem.siblings('td:first').attr('data-tooltip');
+  var date = $('th:eq(' + elem.index().toString(10) + ') p').text();
+
+  modal.find('h6:first-child').text(person);
+  modal.find('.card-subtitle').text(date + ' ' + monthMap[months.indexOf($('#month-switch').text().split(/\s+/g)[0])]);
+}
+
+// Активация модального окна
 $('th.modal-trigger').click(function() {
   var modal = $(this).children('.modal');
   modal.toggleClass('active');
@@ -147,16 +166,36 @@ $('th.modal-trigger').click(function() {
     lastActive.removeClass('active');
   }
   lastActive = modal;
+  setUpModal($(this));
 });
 
-// Закрыть окно
-$('th.modal-trigger .card-header button').click(function(event) {
+// Закрытие окна
+$('th.modal-trigger .card-header button, td.modal-trigger .card-header button').click(function(event) {
   event.preventDefault();
   $(this).parents('.modal').removeClass('active');
 });
 
-// Установить тему урока и закрыть окно
-$('th.modal-trigger button').click(function(event) {
+// Выставление темы урока и закрытие окна
+$('th.modal-trigger .card-body button').click(function(event) {
   event.preventDefault();
+  $(this).parents('.modal').removeClass('active');
+  $(this).parents('th').addClass('topic-set');
+});
+
+// Активация модального окна выставления оценок
+$('td.modal-trigger').click(function() {
+  var modal = $(this).children('.modal');
+  modal.toggleClass('active');
+  if (lastActive !== undefined && !lastActive.is(modal)) {
+    lastActive.removeClass('active');
+  }
+  lastActive = modal;
+  setUpModalMark($(this));
+});
+
+// Выставление оценки и закрытие окна
+$('td.modal-trigger .card-body button').click(function(event) {
+  event.preventDefault();
+  $(this).parents('.modal').prev().text($(this).prev().val());
   $(this).parents('.modal').removeClass('active');
 });
