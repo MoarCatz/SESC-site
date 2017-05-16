@@ -112,6 +112,10 @@ footer .nav .nav-item a {
   color: #fff;
 }
 
+footer .column img {
+  filter: brightness(0) invert(1);
+}
+
 dd {
   margin: 0rem 0 0.1rem 0 !important;
 }
