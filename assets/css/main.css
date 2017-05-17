@@ -1,36 +1,53 @@
 header {
-  background: rgba(193, 251, 155, 0.4);
+  background: #f6f6f6;
+}
+
+.navbar-primary {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-section.hide-md {
+  flex-direction: column;
+
+  flex-grow: 4;
+  align-items: stretch;
+}
+
+.navbar-section.hide-md .flex {
+  justify-content: space-between;
 }
 
 blockquote {
+  margin-right: 0;
+
   border-color: rgba(23, 89, 29, 0.7);
   background: rgba(23, 91, 27, 0.1);
+  background: rgba(23, 91, 27, 0.03);
 }
 
 .card {
   background: rgba(207, 216, 220, 0.25);
 }
 
-.navbar-section .btn {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
+.card-header h4 {
+  overflow: hidden;
 
-.card-header h4{
   margin-bottom: 0;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .header-logo {
-  position: relative;
-  bottom: 5px;
-  left: 15px;
-
   width: 80%;
-  height: 80%;
 }
 
-.no-outline:focus {
-  box-shadow: none;
+a.show-xs .header-logo {
+  width: 20px;
+  margin: 0 15px;
 }
 
 .main-bar {
@@ -83,7 +100,94 @@ article p {
 }
 
 footer {
+  color: #fff;
   border: 0 solid #4CAF50;
   border-top-width: 3px;
   background: rgba(0, 0, 0, 0.7);
+}
+
+footer .nav .nav-item a {
+  padding: 0;
+
+  color: #fff;
+}
+
+footer .column img {
+  filter: brightness(0) invert(1);
+}
+
+dd {
+  margin: 0rem 0 0.1rem 0 !important;
+}
+
+.card-news {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card.large-card {
+  text-decoration: none;
+
+  color: #fff;
+  background-image: url(https://picturepan2.github.io/spectre/img/osx-el-capitan-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card.large-card:hover {
+  opacity: 0.9;
+}
+
+.card.large-card .card-image {
+  opacity: 0;
+}
+
+.card.large-card h4 {
+  color: #fff;
+}
+
+.columns.additional-news {
+  height: 100%;
+
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+}
+
+.columns.additional-news .column.col-12 {
+  padding: 0;
+}
+
+.columns.additional-news .column.col-12 .card {
+   text-decoration: none !important;
+ }
+
+ .columns.additional-news .column.col-12 .card:hover {
+  opacity: 0.9;
+}
+
+.columns.additional-news .column.col-12 .card .col-4 {
+  text-decoration: none;
+
+  color: #fff;
+  background-image: url(https://picturepan2.github.io/spectre/img/osx-yosemite.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.columns.additional-news .column.col-12 .card .col-4 img {
+  opacity: 0;
+}
+
+.columns.additional-news .column.col-12 .card-body {
+  color: #50596c;
+}
+
+.card-news .column {
+  padding: 0;
+}
+
+.card .card-subtitle {
+  opacity: 1;
 }

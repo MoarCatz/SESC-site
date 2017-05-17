@@ -1,0 +1,9 @@
+#plan + article ul {
+  margin: 0;
+
+  list-style: none;
+}
+
+#plan + article li {
+  margin: 0;
+}

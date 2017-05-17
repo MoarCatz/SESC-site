@@ -1,0 +1,75 @@
+@media only screen and (max-width: 960px) {
+  td, th {
+    font-size: 8pt;
+  }
+}
+
+.hymn p {
+  text-indent: 0;
+
+  font-style: italic;
+  line-height: 15pt;
+}
+
+figure {
+  display: inline-block;
+}
+
+#achievments + article h6 {
+  margin: 0;
+
+  text-align: center;
+}
+
+#units + article td:first-child,
+#units + article td:last-child,
+#units + article td:nth-child(4),
+#staff + article td:nth-child(n+4) {
+  text-align: center !important;
+}
+
+#units + article td:nth-child(3) {
+  font-weight: bold;
+}
+
+#units + article table {
+  margin-bottom: 15px;
+}
+
+#units + article p,
+#first-aid + article p {
+  text-indent: 0;
+}
+
+#staff + article form {
+  margin: 0 20px;
+}
+
+#staff + article .tile {
+  margin: 10px 5px;
+}
+
+.tile-content .flex {
+  flex-direction: column;
+
+  align-items: stretch;
+}
+
+.tile-content .flex p {
+  flex: 2 0 60%;
+}
+
+.tile-content .flex .label {
+  margin-left: 10px;
+  padding: 3px 5px;
+
+  flex: 1 0 40%;
+}
+
+@media only screen and (min-width: 480px) {
+  .tile-content .flex {
+    flex-direction: row;
+
+    align-items: space-between;
+  }
+}
